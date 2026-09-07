@@ -1,0 +1,56 @@
+format: jb-book
+
+root: index.md
+options:
+  numbered: false
+
+parts:
+  - caption: Programmering
+    chapters:
+    - file: book/programmering/for_løkker/teori.md
+      sections:
+      - file: book/programmering/for_løkker/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/while_løkker/teori.md
+      sections:
+      - file: book/programmering/while_løkker/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/if_setninger/teori.md
+      sections:
+      - file: book/programmering/if_setninger/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/funksjoner/teori.md
+      sections:
+      - file: book/programmering/funksjoner/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/likninger/teori.md
+      sections:
+      - file: book/programmering/likninger/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/likningssystemer/teori.md
+      sections:
+      - file: book/programmering/likningssystemer/oppgaver.md
+        title: Oppgaver
+    - file: book/programmering/tallfølger_og_figurtall/teori.md
+      sections:
+      - file: book/programmering/tallfølger_og_figurtall/oppgaver.md
+        title: Oppgaver
+  - caption: Likninger og ulikheter
+    chapters:
+    - file: book/likninger_og_ulikheter/likningssystemer/teori.md
+      sections:
+      - file: book/likninger_og_ulikheter/likningssystemer/oppgaver.md
+        title: Oppgaver
+    - file: book/likninger_og_ulikheter/ulikheter/teori.md
+      sections:
+      - file: book/likninger_og_ulikheter/ulikheter/oppgaver.md
+        title: Oppgaver
+    
+
+
+
+
+    
+
+
+

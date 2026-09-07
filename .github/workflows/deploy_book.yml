@@ -1,0 +1,72 @@
+name: deploy-book
+
+# Only run this when the main branch changes
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Install dependencies
+      - name: Set up Python 3.12.3
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.12.3
+
+      - name: Cache apt packages
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt/archives
+          key: ${{ runner.os }}-apt-texlive-${{ hashFiles('.github/workflows/deploy_book.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-texlive-
+
+      - name: Install system dependencies (LaTeX + pdf2svg)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-science \
+            texlive-plain-generic \
+            cm-super \
+            dvipng \
+            dvisvgm \
+            ghostscript \
+            pdf2svg
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Show munchboka-edutools version
+        run: |
+          python -c "import importlib.metadata as m; print('munchboka-edutools', m.version('munchboka-edutools'))"
+
+      # Build the book
+      - name: Build the book
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          jupyter-book clean . --all
+          rm -rf _build .jupyter_cache
+          jupyter-book build . --all
+
+
+      # Deploy to GitHub Pages
+      - name: GitHub Pages action
+        uses: peaceiris/actions-gh-pages@v3.6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html
+          keep_files: true  # Ensures existing files like CNAME remain
+
+
+          
