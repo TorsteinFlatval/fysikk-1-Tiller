@@ -628,7 +628,7 @@
 a</label><div class="sd-tab-content docutils">
 <p>Før løkka starter, er <code class="code docutils literal highlight highlight-python"><span class="n">s</span> <span class="o">=</span> <span class="mf">0.0</span></code> og <code class="code docutils literal highlight highlight-python"><span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span></code>. Hva blir <code class="code docutils literal highlight highlight-python"><span class="n">s</span></code> etter at koden <code class="code docutils literal highlight highlight-python"><span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">v</span><span class="o">*</span><span class="n">dt</span></code> kjøres <strong>én gang</strong>, med <code class="code docutils literal highlight highlight-python"><span class="n">v</span> <span class="o">=</span> <span class="mf">5.0</span></code> og <code class="code docutils literal highlight highlight-python"><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span></code>?</p>
 
-        <div id="container-code-72e4b0d4"></div>
+        <div id="container-code-e1a5e417"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -640,7 +640,7 @@ s = s + v*dt
 print(s)`;
 
                 makePredictionInteractiveCode(
-                    "container-code-72e4b0d4",
+                    "container-code-e1a5e417",
                     code,
                 );
             });
@@ -651,7 +651,7 @@ print(s)`;
 b</label><div class="sd-tab-content docutils">
 <p>Hva blir <code class="code docutils literal highlight highlight-python"><span class="n">t</span></code> etter at koden <code class="code docutils literal highlight highlight-python"><span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">dt</span></code> kjøres <strong>én gang</strong>, med <code class="code docutils literal highlight highlight-python"><span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span></code> og <code class="code docutils literal highlight highlight-python"><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span></code>?</p>
 
-        <div id="container-code-3d7057bf"></div>
+        <div id="container-code-df150c4e"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -662,7 +662,7 @@ t = t + dt
 print(t)`;
 
                 makePredictionInteractiveCode(
-                    "container-code-3d7057bf",
+                    "container-code-df150c4e",
                     code,
                 );
             });
@@ -673,7 +673,7 @@ print(t)`;
 c</label><div class="sd-tab-content docutils">
 <p>Betingelsen i løkka er <code class="code docutils literal highlight highlight-python"><span class="n">t</span> <span class="o">&lt;</span> <span class="n">t_slutt</span></code>. Dersom <code class="code docutils literal highlight highlight-python"><span class="n">t</span> <span class="o">=</span> <span class="mf">2.9</span></code> og <code class="code docutils literal highlight highlight-python"><span class="n">t_slutt</span> <span class="o">=</span> <span class="mf">3.0</span></code>, vil løkka kjøre <strong>enda en gang</strong>? Test i koden under om betingelsen blir <code class="code docutils literal highlight highlight-python"><span class="kc">True</span></code> eller <code class="code docutils literal highlight highlight-python"><span class="kc">False</span></code>.</p>
 
-        <div id="container-code-f3ff2864"></div>
+        <div id="container-code-87e816e8"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -683,7 +683,7 @@ t_slutt = 3.0
 print(t < t_slutt)`;
 
                 makePredictionInteractiveCode(
-                    "container-code-f3ff2864",
+                    "container-code-87e816e8",
                     code,
                 );
             });
@@ -708,7 +708,7 @@ print(t < t_slutt)`;
 a</label><div class="sd-tab-content docutils">
 <p>Bruk løkka som utgangspunkt, men bytt om rekkefølgen på de to linjene inni løkka, slik at <code class="code docutils literal highlight highlight-python"><span class="n">t</span></code> oppdateres <strong>før</strong> <code class="code docutils literal highlight highlight-python"><span class="n">s</span></code>. Endrer dette svaret programmet gir til slutt, gitt at <code class="code docutils literal highlight highlight-python"><span class="n">v</span> <span class="o">=</span> <span class="mf">5.0</span></code> er konstant? Test i koden.</p>
 
-        <div id="container-code-c83487f5"></div>
+        <div id="container-code-4fa9e6a8"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -722,7 +722,7 @@ while t < t_slutt:
     # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-c83487f5",
+                    "container-code-4fa9e6a8",
                     code,
                 );
             });
@@ -757,7 +757,7 @@ while t < t_slutt:
 b</label><div class="sd-tab-content docutils">
 <p>Endre programmet slik at tidsstegene er <code class="code docutils literal highlight highlight-python"><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.5</span></code> i stedet for <code class="code docutils literal highlight highlight-python"><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span></code>, men la <code class="code docutils literal highlight highlight-python"><span class="n">t_slutt</span> <span class="o">=</span> <span class="mf">3.0</span></code> være uendret. Hvor mange ganger kjører løkka nå, og blir sluttiden <code class="code docutils literal highlight highlight-python"><span class="n">t</span></code> nøyaktig lik <code class="code docutils literal highlight highlight-python"><span class="mf">3.0</span></code>?</p>
 
-        <div id="container-code-dd3ade6e"></div>
+        <div id="container-code-65d9e053"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -771,7 +771,7 @@ while t < t_slutt:
     # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-dd3ade6e",
+                    "container-code-65d9e053",
                     code,
                 );
             });
@@ -823,7 +823,7 @@ while t < t_slutt:
 <div class="explore-body docutils container">
 <p>La oss bli kjent med lister og <code class="code docutils literal highlight highlight-python"><span class="o">.</span><span class="n">append</span><span class="p">()</span></code>. Prøv koden under: den starter med en liste som bare har ett element, og bygger den opp gradvis ved å legge til nye tall med <code class="code docutils literal highlight highlight-python"><span class="o">.</span><span class="n">append</span><span class="p">()</span></code>.</p>
 
-        <div id="container-code-6a24a83d"></div>
+        <div id="container-code-e1996320"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -833,7 +833,7 @@ tall.append(2)
 print(tall)`;
 
                 makePredictionInteractiveCode(
-                    "container-code-6a24a83d",
+                    "container-code-e1996320",
                     code,
                 );
             });
@@ -871,7 +871,7 @@ print(tall)`;
 <div class="explore-body docutils container">
 <p>Før løkka starter er <code class="code docutils literal highlight highlight-python"><span class="n">v</span> <span class="o">=</span> <span class="mf">5.0</span></code> og <code class="code docutils literal highlight highlight-python"><span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span></code>. Hva blir <code class="code docutils literal highlight highlight-python"><span class="n">v</span></code> etter at koden <code class="code docutils literal highlight highlight-python"><span class="n">v</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span><span class="n">dt</span></code> kjøres <strong>én gang</strong>, med <code class="code docutils literal highlight highlight-python"><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.1</span></code>? Regn ut svaret selv, og test det deretter i koden under.</p>
 
-        <div id="container-code-9b5d267c"></div>
+        <div id="container-code-fe26b1e9"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -883,7 +883,7 @@ v = v + a*dt
 print(v)`;
 
                 makePredictionInteractiveCode(
-                    "container-code-9b5d267c",
+                    "container-code-fe26b1e9",
                     code,
                 );
             });
@@ -904,7 +904,7 @@ print(v)`;
 </div>
 <p>Prøv å kjøre hele programmet under. Legg merke til at grafen av <code class="code docutils literal highlight highlight-python"><span class="n">s</span></code> mot <code class="code docutils literal highlight highlight-python"><span class="n">t</span></code> ikke blir en rett linje, men krummer oppover — det er fordi farten selv øker med tiden.</p>
 
-        <div id="container-code-64725193"></div>
+        <div id="container-code-8d3951b0"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -934,14 +934,14 @@ grid()
 show()`;
 
                 makeInteractiveCode(
-                    "container-code-64725193",
+                    "container-code-8d3951b0",
                     code,
                 );
             });
         </script>
         <p>Dersom vi i stedet tegner farten <code class="code docutils literal highlight highlight-python"><span class="n">v</span></code> som funksjon av tiden, blir grafen en rett linje, siden farten øker med samme mengde for hvert like store tidssteg. Prøv å kjøre programmet under for å se dette selv.</p>
 
-        <div id="container-code-d726a844"></div>
+        <div id="container-code-fcd31836"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -971,7 +971,7 @@ grid()
 show()`;
 
                 makeInteractiveCode(
-                    "container-code-d726a844",
+                    "container-code-fcd31836",
                     code,
                 );
             });
@@ -995,7 +995,7 @@ show()`;
 a</label><div class="sd-tab-content docutils">
 <p>Endre akselerasjonen i programmet til <code class="code docutils literal highlight highlight-python"><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span></code> m/s² , og la resten være uendret. Hva blir farten <code class="code docutils literal highlight highlight-python"><span class="n">v</span></code> når simuleringen er ferdig? Test i koden.</p>
 
-        <div id="container-code-cf46ca08"></div>
+        <div id="container-code-417e8225"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1010,7 +1010,7 @@ s_verdier = [s]
 # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-cf46ca08",
+                    "container-code-417e8225",
                     code,
                 );
             });
@@ -1051,7 +1051,7 @@ s_verdier = [s]
 b</label><div class="sd-tab-content docutils">
 <p>Legg til en tredje liste, <code class="code docutils literal highlight highlight-python"><span class="n">v_verdier</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">]</span></code>, og legg til en linje inni løkka som bruker <code class="code docutils literal highlight highlight-python"><span class="o">.</span><span class="n">append</span><span class="p">()</span></code> til å lagre farten for hvert tidssteg, på samme måte som for <code class="code docutils literal highlight highlight-python"><span class="n">s_verdier</span></code>. Tegn til slutt en graf av <code class="code docutils literal highlight highlight-python"><span class="n">v</span></code> som funksjon av <code class="code docutils literal highlight highlight-python"><span class="n">t</span></code>, med <code class="code docutils literal highlight highlight-python"><span class="n">a</span> <span class="o">=</span> <span class="mf">2.0</span></code> m/s².</p>
 
-        <div id="container-code-76ffd4e6"></div>
+        <div id="container-code-88f72d75"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1068,7 +1068,7 @@ v_verdier = [v]
 # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-76ffd4e6",
+                    "container-code-88f72d75",
                     code,
                 );
             });
@@ -1116,7 +1116,7 @@ v_verdier = [v]
 c</label><div class="sd-tab-content docutils">
 <p>Legg til en linje inni løkka som legger til <code class="code docutils literal highlight highlight-python"><span class="mi">1</span></code> på en teller <code class="code docutils literal highlight highlight-python"><span class="n">antall_steg</span></code> (som du setter til <code class="code docutils literal highlight highlight-python"><span class="mi">0</span></code> før løkka starter). Endre deretter <code class="code docutils literal highlight highlight-python"><span class="n">dt</span></code> til <code class="code docutils literal highlight highlight-python"><span class="mf">0.01</span></code> i stedet for <code class="code docutils literal highlight highlight-python"><span class="mf">0.1</span></code>, og se hvordan antall steg forandrer seg. Blir grafen jevnere eller mer hakkete med mindre tidssteg?</p>
 
-        <div id="container-code-2e7c62cb"></div>
+        <div id="container-code-a909803f"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1132,7 +1132,7 @@ antall_steg = 0
 # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-2e7c62cb",
+                    "container-code-a909803f",
                     code,
                 );
             });
@@ -1195,7 +1195,7 @@ antall_steg = 0
 <div class="explore-body docutils container">
 <p>Regn selv ut <code class="code docutils literal highlight highlight-python"><span class="n">a</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></code> ved å sette <code class="code docutils literal highlight highlight-python"><span class="n">v</span> <span class="o">=</span> <span class="mi">0</span></code> inn i formelen <code class="code docutils literal highlight highlight-python"><span class="n">aks</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">v</span> <span class="o">+</span> <span class="mi">6</span></code>. Test deretter i koden om du fikk rett, og prøv deg fram med ulike verdier for <code class="code docutils literal highlight highlight-python"><span class="n">v</span></code> for å finne ved hvilken fart akselerasjonen blir <code class="code docutils literal highlight highlight-python"><span class="mi">0</span></code>.</p>
 
-        <div id="container-code-c3d1c165"></div>
+        <div id="container-code-68640ea6"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1206,7 +1206,7 @@ antall_steg = 0
 print(a(0))`;
 
                 makePredictionInteractiveCode(
-                    "container-code-c3d1c165",
+                    "container-code-68640ea6",
                     code,
                 );
             });
@@ -1227,7 +1227,7 @@ print(a(0))`;
 </div>
 <p>Prøv å kjøre hele programmet under. Det tegner opp en v-s-graf som viser hvordan farten øker raskt i starten, og deretter flater ut mot en toppfart etter hvert som løperen nærmer seg 100 meter.</p>
 
-        <div id="container-code-9524046e"></div>
+        <div id="container-code-f1711cec"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1261,7 +1261,7 @@ grid()
 show()`;
 
                 makeInteractiveCode(
-                    "container-code-9524046e",
+                    "container-code-f1711cec",
                     code,
                 );
             });
@@ -1275,7 +1275,7 @@ show()`;
 a</label><div class="sd-tab-content docutils">
 <p>Legg til en variabel <code class="code docutils literal highlight highlight-python"><span class="n">antall_steg</span> <span class="o">=</span> <span class="mi">0</span></code> før løkka, og øk den med <code class="code docutils literal highlight highlight-python"><span class="mi">1</span></code> for hvert tidssteg. Skriv ut hvor mange tidssteg simuleringen bruker, med <code class="code docutils literal highlight highlight-python"><span class="n">dt</span> <span class="o">=</span> <span class="mf">0.01</span></code> s.</p>
 
-        <div id="container-code-e46856df"></div>
+        <div id="container-code-4e1b317e"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1293,7 +1293,7 @@ def a(v):
 # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-e46856df",
+                    "container-code-4e1b317e",
                     code,
                 );
             });
@@ -1335,7 +1335,7 @@ def a(v):
 b</label><div class="sd-tab-content docutils">
 <p>Skriv ut løpstiden <code class="code docutils literal highlight highlight-python"><span class="n">t</span></code> når løperen har kommet i mål. Test deretter hva som skjer med løpstiden dersom du endrer funksjonen slik at akselerasjonen blir <code class="code docutils literal highlight highlight-python"><span class="n">aks</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="n">v</span> <span class="o">+</span> <span class="mi">8</span></code> i stedet. Blir løperen fortere eller saktere?</p>
 
-        <div id="container-code-ee001869"></div>
+        <div id="container-code-75d90156"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1352,7 +1352,7 @@ def a(v):
 # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-ee001869",
+                    "container-code-75d90156",
                     code,
                 );
             });
@@ -1392,7 +1392,7 @@ def a(v):
 c</label><div class="sd-tab-content docutils">
 <p>Bruk en <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-setning inni løkka til å sjekke om farten <code class="code docutils literal highlight highlight-python"><span class="n">v</span></code> har passert <code class="code docutils literal highlight highlight-python"><span class="mf">10.0</span></code> m/s. Dersom den har det, skal programmet skrive ut “Passerte 10 m/s!” <strong>én gang</strong> (bruk gjerne en egen variabel som huker av at meldingen allerede er skrevet ut, slik at den ikke skrives ut for hvert tidssteg etterpå).</p>
 
-        <div id="container-code-2fc3eed4"></div>
+        <div id="container-code-ad5ce370"></div>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const code = 
@@ -1410,7 +1410,7 @@ def a(v):
 # FYLL INN DIN KODE HER`;
 
                 makeInteractiveCode(
-                    "container-code-2fc3eed4",
+                    "container-code-ad5ce370",
                     code,
                 );
             });
