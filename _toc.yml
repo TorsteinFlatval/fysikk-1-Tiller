@@ -35,22 +35,9 @@ parts:
       sections:
       - file: book/programmering/tallfølger_og_figurtall/oppgaver.md
         title: Oppgaver
-  - caption: Likninger og ulikheter
+  - caption: Programmering i fysikk
     chapters:
-    - file: book/likninger_og_ulikheter/likningssystemer/teori.md
+    - file: book/Programmering i fysikk/konstant akselerasjon/1E.md
       sections:
-      - file: book/likninger_og_ulikheter/likningssystemer/oppgaver.md
+      - file: book/Programmering i fysikk/konstant akselerasjon/oppgaver.md
         title: Oppgaver
-    - file: book/likninger_og_ulikheter/ulikheter/teori.md
-      sections:
-      - file: book/likninger_og_ulikheter/ulikheter/oppgaver.md
-        title: Oppgaver
-    
-
-
-
-
-    
-
-
-

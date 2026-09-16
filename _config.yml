@@ -1,7 +1,7 @@
-title: Matematikk 1T
+title: Fysikk 1
 author: Torstein Flatval, Tiller Videregående Skole
 copyright: "2026"
-logo: _logo/Tiller 1T logo.png
+logo: 
 exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", README.md, LICENSE.md, LICENSE_CONTENT.md, HOWTOWRITE.md]
 description: ""
 
