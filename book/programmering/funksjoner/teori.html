@@ -1,0 +1,1119 @@
+
+<!DOCTYPE html>
+
+
+<html lang="norwegian" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Funksjoner med programmering &#8212; Fysikk 1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/general_style.css?v=11bbc4b6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/admonitions.css?v=9237f12a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/popup.css?v=2d27c3a4" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/escape-room.css?v=bfeb5342" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/jeopardy.css?v=71d9bb06" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/parsonsPuzzle.css?v=9fbab2c7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/static_code_blocks.css?v=68f9364b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/clickable_figures/style.css?v=d35dfce7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/style.css?v=b30732ed" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/mathjax/style.css?v=194b018e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/figures.css?v=46e199f0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/geogebra.css?v=fd180d66" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/grids.css?v=7667ba21" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/misc.css?v=55d93a12" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/popup_code.css?v=4b4feebf" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/tabs.css?v=a560da15" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/multipleChoiceQuiz/style.css?v=d667b426" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/general_style.css?v=dfcc20d4" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=9eb2d604" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/flashcards.css?v=816457f1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/interactive_code.css?v=44933e1a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=951b6e4f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/quiz.css?v=bc8164d8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/admonitions.css?v=a3692687" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/dialogue.css?v=c5b7ed32" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/figures.css?v=acd93126" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/popup.css?v=26181dfd" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/timedQuiz.css?v=89e27729" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/cas_popup.css?v=bb968b84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-light.css?v=0cccc4aa" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark.css?v=e9bcc25f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark-high-contrast.css?v=4c0c1b0f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/table.css?v=fd6d533f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/pairPuzzle/style.css?v=0a0f323a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/parsons/parsonsPuzzle.css?v=a1529215" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/part.css?v=bc286cc2" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/print_pdf.css?v=448841f9" />
+    <link id="highlight-theme-light" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" />
+    <link id="highlight-theme-dark" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/general_style.css?v=11bbc4b6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/grid_print.css?v=73205d86" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/dialogue.css?v=1b585024" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css?v=f84a357c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/static_code_blocks.css?v=68f9364b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactiveCode/style.css?v=23cd07d5" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/parsons_puzzle/parsonsPuzzle.css?v=9fbab2c7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_default_cm.css?v=3beebd47" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_high_contrast_cm.css?v=4c0c1b0f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_cm.css?v=facc8b7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_cm.css?v=d1235728" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/one_dark_cm.css?v=3ae52176" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_default_cm.css?v=c880a553" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pairPuzzle/style.css?v=f77426ac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/clickable_figures/style.css?v=d35dfce7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/tabs.css?v=a560da15" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/geogebra.css?v=fd180d66" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/popup_code.css?v=4b4feebf" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/figures.css?v=5dd46ff0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/misc.css?v=55d93a12" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/grids.css?v=7667ba21" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mathjax/style.css?v=0f1cb662" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/multipleChoiceQuiz/style.css?v=89e27729" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../../../_static/documentation_options.js?v=c712eed9"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/munchboka/fonts/opendyslexic/opendylexic-toggle.js?v=1652b728"></script>
+    <script src="../../../_static/munchboka/js/utils.js?v=b59157b9"></script>
+    <script src="../../../_static/munchboka/js/casThemeManager.js?v=88874cc7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <script src="../../../_static/munchboka/js/skulpt/skulpt.js?v=51c28977"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../_static/tabs.js?v=3ee01567"></script>
+    <script src="../../../_static/munchboka/js/solution_timer.js?v=192f5d3d"></script>
+    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="../../../_static/munchboka/js/flashcards.js?v=293ceac2"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/interactiveCodeSetup.js?v=ce240afa"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/codeEditor.js?v=d7a9df79"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/workerManager.js?v=024a7849"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/turtleCode.js?v=ecc68a76"></script>
+    <script src="../../../_static/munchboka/js/jeopardy.js?v=375a3583"></script>
+    <script src="../../../_static/munchboka/js/quiz.js?v=f8bcd7a1"></script>
+    <script>let toggleHintShow = 'Klikk for å vise';</script>
+    <script>let toggleHintHide = 'Klikk for å skjule';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/munchboka/js/popup.js?v=5db611f4"></script>
+    <script src="../../../_static/munchboka/js/timedQuiz/utils.js?v=2c6f871c"></script>
+    <script src="../../../_static/munchboka/js/timedQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="../../../_static/munchboka/js/timedQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}, "macros": {"annotateAbove": ["\\mathrel{\\overset{\\substack{\\text{#2} \\\\ \\Bigg\\downarrow}}{#1}}", 2], "annotateBelow": ["\\mathrel{\\underset{\\substack{\\Bigg\\uparrow \\\\ \\text{#2}}}{#1}}", 2], "cline": ["\\underline{\\phantom{#1}}", 1], "and": ["\\quad \\land \\quad"], "or": ["\\quad \\lor \\quad"], "liff": ["\\quad \\iff \\quad"], "limplies": ["\\quad \\implies \\quad"], "limpliedby": ["\\quad \\impliedby \\quad"], "lland": ["\\; \\land \\;"], "degree": ["^\\circ"], "qog": ["\\quad \\text{og} \\quad"], "qder": ["\\quad \\text{der} \\quad"], "qeller": ["\\quad \\text{eller} \\quad"], "qhvis": ["\\quad \\text{hvis} \\quad"], "qfor": ["\\quad \\text{for} \\quad"], "natural": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rational": ["\\mathbb{Q}"], "real": ["\\mathbb{R}"], "irrational": ["\\mathbb{Q}^c"], "qcomma": [",\\quad"], "nimplies": ["\\quad\\mathrel{\\not\\!\\!\\!\\implies}\\quad"], "nimpliedby": ["\\quad\\mathrel{\\not\\!\\!\\!\\impliedby}\\quad"], "niff": ["\\quad\\mathrel{\\not\\!\\!\\!\\iff}\\quad"], "cubica": ["\\raisebox{-0.4ex}{\\small\\(\\frown\\!\\smile\\)}", 0], "cubicb": ["\\raisebox{-0.4ex}{\\small\\(\\smile\\!\\frown\\)}", 0], "t": ["\\mathrm{#1}", 1], "dot": ["\\vec{#1} \\cdot \\vec{#2}", 2], "len": ["\\abs{\\vec{#1}}", 1], "lvec": ["\\overrightarrow{#1}", 1], "v": ["\\left[#1, #2\\right]", 2], "proj": ["\\mathrm{proj}_{#1}\\left(#2\\right)", 2], "mstack": ["\\begin{array}{c}#1\\end{array}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/programmering/funksjoner/teori';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script>mermaid.initialize({"startOnLoad": true})</script>
+    <script src="../../../_static/munchboka/js/pairPuzzle/draggableItem.js?v=ce9ef7bd"></script>
+    <script src="../../../_static/munchboka/js/pairPuzzle/dropZone.js?v=56907477"></script>
+    <script src="../../../_static/munchboka/js/pairPuzzle/game.js?v=cb8b0d45"></script>
+    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="../../../_static/munchboka/js/parsons/parsonsPuzzle.js?v=57870877"></script>
+    <script src="../../../_static/munchboka/js/print_answer_key.js?v=eebcd271"></script>
+    <script src="../../../_static/munchboka/js/solution2.js?v=a2d1029e"></script>
+    <script src="../../../_static/munchboka/js/part.js?v=ca40db03"></script>
+    <script src="../../../_static/munchboka/js/goals.js?v=a2f2d5f7"></script>
+    <script src="../../../_static/munchboka/js/proof.js?v=2793954e"></script>
+    <script src="../../../_static/munchboka/js/hint.js?v=9d6836a9"></script>
+    <script src="../../../_static/static_code_blocks.js?v=e512471c"></script>
+    <script src="../../../_static/utils.js?v=14803243"></script>
+    <script src="../../../_static/serviceWorker.js?v=19bb19ce"></script>
+    <script src="../../../_static/geogebra-setup.js?v=c67998b1"></script>
+    <script src="../../../_static/skulpt/skulpt.js?v=51c28977"></script>
+    <script src="../../../_static/interactiveCode/interactiveCodeSetup.js?v=49566f0b"></script>
+    <script src="../../../_static/interactiveCode/codeEditor.js?v=30f3f389"></script>
+    <script src="../../../_static/interactiveCode/turtleCode.js?v=0d62d95e"></script>
+    <script src="../../../_static/interactiveCode/workerManager.js?v=de8adb65"></script>
+    <script src="../../../_static/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
+    <script src="../../../_static/parsons_puzzle/theme-switcher.js?v=c0cdcaac"></script>
+    <script src="../../../_static/parsons_puzzle/parsonsPuzzle.js?v=6e8c8774"></script>
+    <script src="../../../_static/pairPuzzle/dropZone.js?v=56907477"></script>
+    <script src="../../../_static/pairPuzzle/draggableItem.js?v=5767251d"></script>
+    <script src="../../../_static/pairPuzzle/game.js?v=cb8b0d45"></script>
+    <script src="../../../_static/clickable_figures/clickable_figure.js?v=dd2467e6"></script>
+    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="../../../_static/multipleChoiceQuiz/sequentialMultipleChoiceQuiz.js?v=503540b6"></script>
+    <script src="../../../_static/multipleChoiceQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
+    <script src="../../../_static/multipleChoiceQuiz/utils.js?v=2c6f871c"></script>
+    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuiz.js?v=7d161c2c"></script>
+    <script src="../../../_static/fonts/opendyslexic/opendylexic-toggle.js?v=7208047f"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="../../../_static/munchboka/js/highlight-init.js?v=6bc17905"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="../../../_static/munchboka/js/geogebra-setup.js?v=8e77fc11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Oppgaver: Funksjoner i Python" href="oppgaver.html" />
+    <link rel="prev" title="Oppgaver: if - else setninger" href="../if_setninger/oppgaver.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="norwegian"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
+<!-- Pyodide -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+
+
+<!-- CodeMirror -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+<link rel="stylesheet" href="../../../_static/code_mirror_themes/github_light_cm.css">
+<link rel="stylesheet" href="../../../_static/code_mirror_themes/github_dark_cm.css">
+<link rel="stylesheet" href="../../../_static/code_mirror_themes/one_dark_cm.css">
+
+<!-- CodeMirror scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- highlighting of code in Parsons puzzle -->
+<head>
+    <link id="highlight-theme-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
+    <link id="highlight-theme-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css">
+</head>
+
+
+
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch-improved@0.3.1/dist/jquery.ui.touch-punch-improved.min.js"></script>
+
+
+
+
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Fysikk 1</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programmering</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../for_l%C3%B8kker/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../while_l%C3%B8kker/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../if_setninger/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setninger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../if_setninger/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Funksjoner med programmering</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programmering i fysikk</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Programmering%20i%20fysikk/konstant%20akselerasjon/1E.html">Programmering av rettlinjet bevegelse</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Last ned denne siden">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/book/programmering/funksjoner/teori.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Last ned kildefilen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Skriv ut til PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullskjerm-modus"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Funksjoner med programmering</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Innhold </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definere-en-funksjon">Definere en funksjon</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-Definere-en-funksjon">Definere en funksjon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-1">Eksempel 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-Utforsk-1">Utforsk 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funksjoner-med-parametere">Funksjoner med parametere</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-2">Eksempel 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#returnere-en-verdi">Returnere en verdi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-return-l-python"><code class="code docutils literal highlight highlight-python"><span class="k">return</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-Utforsk-2">Utforsk 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-4">Eksempel 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Underveisoppgave-1">Underveisoppgave 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Underveisoppgave-2">Underveisoppgave 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Underveisoppgave-3">Underveisoppgave 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-5">Eksempel 5</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="funksjoner-med-programmering">
+<h1>Funksjoner med programmering<a class="headerlink" href="#funksjoner-med-programmering" title="Link to this heading">#</a></h1>
+<div class="goals docutils container">
+<button class="goals-toggle" aria-expanded="false" data-label="Læringsmål">Læringsmål</button><div class="goals-content docutils container">
+<ul class="simple">
+<li><p>Forstå hva en funksjon er og hvorfor vi bruker funksjoner</p></li>
+<li><p>Kunne definere egne funksjoner med <code class="code docutils literal highlight highlight-python"><span class="k">def</span></code></p></li>
+<li><p>Forstå hvordan vi bruker parametere til å gi funksjoner ulike verdier</p></li>
+<li><p>Forstå forskjellen på <code class="code docutils literal highlight highlight-python"><span class="nb">print</span></code> og <code class="code docutils literal highlight highlight-python"><span class="k">return</span></code></p></li>
+</ul>
+</div>
+</div>
+<p>I dette kapittelet skal vi lære å samle kode i funksjoner. En funksjon er en navngitt kodeblokk som utfører en bestemt oppgave. Dette er veldig nyttig når vi skal gjøre samme operasjon flere ganger.</p>
+<section id="definere-en-funksjon">
+<h2>Definere en funksjon<a class="headerlink" href="#definere-en-funksjon" title="Link to this heading">#</a></h2>
+<p>Vi bruker nøkkelordet <code class="code docutils literal highlight highlight-python"><span class="k">def</span></code> for å lage (definere) en funksjon i Python.</p>
+<section class="summary-section" id="summary-Definere-en-funksjon">
+<h3>Definere en funksjon<a class="headerlink" href="#summary-Definere-en-funksjon" title="Link to this heading">#</a></h3>
+<div class="summary-body docutils container">
+<p>Vi definerer en funksjon slik:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">funksjonsnavn</span><span class="p">():</span>
+<span class="linenos">2</span>    <span class="c1"># Kode som skal utføres</span>
+</pre></div>
+</div>
+<p>For å bruke (kalle) funksjonen senere i programmet, skriver vi navnet etterfulgt av parenteser: <code class="code docutils literal highlight highlight-python"><span class="n">funksjonsnavn</span><span class="p">()</span></code>.</p>
+</div>
+</section>
+<section class="example-section" id="example-Eksempel-1">
+<h3>Eksempel 1<a class="headerlink" href="#example-Eksempel-1" title="Link to this heading">#</a></h3>
+<div class="example-body docutils container">
+<p>Programmet nedenfor viser en enkel funksjon som skriver ut en hilsen.</p>
+
+        <div id="container-code-0bd39ad8"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`def hils():
+    print("Hei på deg!")
+
+hils()
+hils()`;
+
+                makeInteractiveCode(
+                    "container-code-0bd39ad8",
+                    code,
+                );
+            });
+        </script>
+        <div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Programmet definerer først funksjonen <code class="code docutils literal highlight highlight-python"><span class="n">hils</span><span class="p">()</span></code>. Deretter kaller vi funksjonen to ganger.</p>
+<p>Utskriften blir:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Hei på deg!</span>
+<span class="go">Hei på deg!</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="explore-section" id="explore-Utforsk-1">
+<h3>Utforsk 1<a class="headerlink" href="#explore-Utforsk-1" title="Link to this heading">#</a></h3>
+<div class="explore-body docutils container">
+<p>Nedenfor vises et program som definerer og bruker en funksjon i en løkke.</p>
+<div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+a</label><div class="sd-tab-content docutils">
+<p>Les programmet nedenfor og prøv å forutsi hva programmet skriver ut.</p>
+<p>Skriv inn gjetningen din nedenfor og sjekk svaret ditt!</p>
+
+        <div id="container-code-0b32dabf"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`def si_hurra():
+    print("Hurra!")
+
+for i in range(3):
+    si_hurra()`;
+
+                makePredictionInteractiveCode(
+                    "container-code-0b32dabf",
+                    code,
+                );
+            });
+        </script>
+        </div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="funksjoner-med-parametere">
+<h2>Funksjoner med parametere<a class="headerlink" href="#funksjoner-med-parametere" title="Link to this heading">#</a></h2>
+<p>Ofte vil vi at funksjonen skal bruke noen verdier vi sender til den. Vi kaller disse verdiene for <strong>parametere</strong> eller <strong>argumenter</strong>. En parameter er variabelen du oppretter når du definerer en funksjon, mens et argument er den faktiske verdien du sender inn når du kaller funksjonen.</p>
+<section class="example-section" id="example-Eksempel-2">
+<h3>Eksempel 2<a class="headerlink" href="#example-Eksempel-2" title="Link to this heading">#</a></h3>
+<div class="example-body docutils container">
+<p>La oss definere to funksjoner og bruke en <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkke til å finne når de gir samme verdi.</p>
+
+        <div id="container-code-230439f1"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`def f(x):
+    return 2*x + 1
+
+def g(x):
+    return x + 5
+
+# Finn når f(x) = g(x)
+for x in range(10):
+    if f(x) == g(x):
+        print(f"f({x}) = g({x}) = {f(x)}")`;
+
+                makeInteractiveCode(
+                    "container-code-230439f1",
+                    code,
+                );
+            });
+        </script>
+        <div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi definerer to funksjoner:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">=</span> <span class="pre">2x</span> <span class="pre">+</span> <span class="pre">1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">g(x)</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">5</span></code></p></li>
+</ul>
+<p>Deretter bruker vi en <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkke til å teste alle verdier fra 0 til 9. For hver <code class="docutils literal notranslate"><span class="pre">x</span></code> sjekker vi om <code class="docutils literal notranslate"><span class="pre">f(x)</span> <span class="pre">==</span> <span class="pre">g(x)</span></code>.</p>
+<p>Kun når <span class="math notranslate nohighlight">\(x = 4\)</span> er de like: <span class="math notranslate nohighlight">\(f(4) = 2 \cdot 4 + 1 = 9\)</span> og <span class="math notranslate nohighlight">\(g(4) = 4 + 5 = 9\)</span>.</p>
+<p>Utskriften blir:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">f(4) = g(4) = 9</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="returnere-en-verdi">
+<h2>Returnere en verdi<a class="headerlink" href="#returnere-en-verdi" title="Link to this heading">#</a></h2>
+<p>Hittil har funksjonene våre bare brukt <code class="code docutils literal highlight highlight-python"><span class="nb">print</span></code> for å skrive ut tekst på skjermen. Ofte vil vi heller at funksjonen skal regne ut et svar og <strong>sende svaret tilbake</strong> til oss slik at vi kan bruke det videre i programmet. Da bruker vi nøkkelordet <code class="code docutils literal highlight highlight-python"><span class="k">return</span></code>.</p>
+<section class="summary-section" id="summary-return-l-python">
+<h3><code class="code docutils literal highlight highlight-python"><span class="k">return</span></code><a class="headerlink" href="#summary-return-l-python" title="Link to this heading">#</a></h3>
+<div class="summary-body docutils container">
+<p>En funksjon avsluttes når den kommer til en <code class="code docutils literal highlight highlight-python"><span class="k">return</span></code>-setning. Verdien bak <code class="code docutils literal highlight highlight-python"><span class="k">return</span></code> sendes tilbake til der funksjonen ble kalt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">kvadrat</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="linenos">2</span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="linenos">3</span>    
+<span class="linenos">4</span><span class="n">svar</span> <span class="o">=</span> <span class="n">kvadrat</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># svar får verdien 9</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="explore-section" id="explore-Utforsk-2">
+<h3>Utforsk 2<a class="headerlink" href="#explore-Utforsk-2" title="Link to this heading">#</a></h3>
+<div class="explore-body docutils container">
+<p>Prøv koden nedenfor!
+Hva skjer hvis du bytter ut <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">areal</span></code> med <code class="docutils literal notranslate"><span class="pre">print(areal)</span></code> inne i funksjonen?
+Når vi vil bruke svaret fra en funksjon videre (som å legge det sammen med noe annet), holder det ikke at funksjonen bare <em>printer</em> svaret. Funksjonen må <strong>returnere</strong> verdien til oss.</p>
+
+        <div id="container-code-64336b30"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`def areal_kvadrat(side):
+    areal = side * side
+    return areal
+
+# Nå kan vi lagre svarene i variabler og bruke dem videre!
+areal1 = areal_kvadrat(3)
+areal2 = areal_kvadrat(4)
+
+totalt_areal = areal1 + areal2
+print("Det totale arealet er", totalt_areal)`;
+
+                makeInteractiveCode(
+                    "container-code-64336b30",
+                    code,
+                );
+            });
+        </script>
+        <div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>I stedet for <code class="code docutils literal highlight highlight-python"><span class="nb">print</span></code> bruker funksjonen <code class="code docutils literal highlight highlight-python"><span class="k">return</span></code>. Det gjør at vi kan lagre resultatet som kommer fra funksjonen, for eksempel i variablene <code class="code docutils literal highlight highlight-python"><span class="n">areal1</span></code> og <code class="code docutils literal highlight highlight-python"><span class="n">areal2</span></code>. Etterpå kan vi regne videre med dem!</p>
+<p>Utskriften blir:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Det totale arealet er 25</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<aside class="margin sidebar">
+<p class="sidebar-title"><code class="code docutils literal highlight highlight-python"><span class="nb">print</span></code> med f-strenger</p>
+<p>I koden bruker vi <code class="code docutils literal highlight highlight-python"><span class="sa">f</span><span class="s2">&quot;f(</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">f_verdi</span><span class="si">}</span><span class="s2">&quot;</span></code>. Dette kalles en <strong>f-streng</strong>. F-strengen lar oss sette verdier inn i teksten ved å bruke <code class="code docutils literal highlight highlight-python"><span class="p">{}</span></code> for å erstate variabelverdier.</p>
+</aside>
+<section class="example-section" id="example-Eksempel-4">
+<h3>Eksempel 4<a class="headerlink" href="#example-Eksempel-4" title="Link to this heading">#</a></h3>
+<div class="example-body docutils container">
+<p>La oss lage en lineær funksjon <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span> og en kvadratisk funksjon <span class="math notranslate nohighlight">\(g(x) = x^2 - 3\)</span>. Så finner vi noen funksjonsværdier.</p>
+
+        <div id="container-code-baac270b"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`def f(x):
+    return 2*x + 1
+
+def g(x):
+    return x**2 - 3
+
+# Finn funksjonsværdier
+x = 4
+f_verdi = f(x)
+g_verdi = g(x)
+
+print(f"f({x}) = {f_verdi}")
+print(f"g({x}) = {g_verdi}")`;
+
+                makeInteractiveCode(
+                    "container-code-baac270b",
+                    code,
+                );
+            });
+        </script>
+        <div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Vi definerer to funksjoner: <code class="code docutils literal highlight highlight-python"><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code> som representerer den lineære funksjonen <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span>, og <code class="code docutils literal highlight highlight-python"><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code> som representerer den andregradsfunksjonen <span class="math notranslate nohighlight">\(g(x) = x^2 - 3\)</span>.</p>
+<p>Deretter finner vi funksjonsverdiene for <span class="math notranslate nohighlight">\(x = 4\)</span>.</p>
+<p>Utskriften blir:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">f(4) = 9</span>
+<span class="go">g(4) = 13</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Underveisoppgave-1">
+<h3>Underveisoppgave 1<a class="headerlink" href="#exercise-Underveisoppgave-1" title="Link to this heading">#</a></h3>
+<div class="exercise-body docutils container">
+<p>Hva skriver programmet ut?</p>
+
+        <div id="container-code-17335ceb"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`def f(x):
+    return 2*x + 1
+
+print(f(5))`;
+
+                makeInteractiveCode(
+                    "container-code-17335ceb",
+                    code,
+                );
+            });
+        </script>
+        <div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">11</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Funksjonen <code class="code docutils literal highlight highlight-python"><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code> tar inn verdien <code class="docutils literal notranslate"><span class="pre">5</span></code> som <code class="docutils literal notranslate"><span class="pre">x</span></code> og regner ut <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">5</span> <span class="pre">+</span> <span class="pre">1</span></code>, som er 11. Dette returneres og blir deretter skrevet ut av <code class="code docutils literal highlight highlight-python"><span class="nb">print</span></code>.</p>
+<p>Utskriften blir:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">11</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Underveisoppgave-2">
+<h3>Underveisoppgave 2<a class="headerlink" href="#exercise-Underveisoppgave-2" title="Link to this heading">#</a></h3>
+<div class="exercise-body docutils container">
+<p>Lag en funksjon <code class="code docutils literal highlight highlight-python"><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code> som tilsvarer det matematiske uttrykket <span class="math notranslate nohighlight">\(g(x) = x^2 - 3\)</span>.
+Bruk funksjonen til å regne ut og skrive ut oppgitt svar for <span class="math notranslate nohighlight">\(g(4)\)</span>.</p>
+
+        <div id="container-code-d805cf89"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`# Skriv koden din her`;
+
+                makeInteractiveCode(
+                    "container-code-d805cf89",
+                    code,
+                );
+            });
+        </script>
+        <div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Utskriften blir:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">13</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="linenos">2</span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Underveisoppgave-3">
+<h3>Underveisoppgave 3<a class="headerlink" href="#exercise-Underveisoppgave-3" title="Link to this heading">#</a></h3>
+<div class="exercise-body docutils container">
+<p>Ta quizen!</p>
+
+        <!-- Container for the quiz -->
+        <div id="quiz-container-8eb4097f7baf483cba63e5b46950f075" class="quiz-main-container"></div>
+        <!-- Include KaTeX for LaTeX rendering -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                // Define your questions and answers
+                const questionsData = [{"content": "Løs oppgaven ved å velge det riktige alternativet: Hvilken kodelinje kaller funksjonen riktig? <pre><code class=\"python\">def min_funksjon(tall):\n    return tall * 2</code></pre>", "answers": [{"content": "`svar = min_funksjon(4)`", "isCorrect": true}, {"content": "`svar = min_funksjon[4]`", "isCorrect": false}, {"content": "`min_funksjon = 4`", "isCorrect": false}, {"content": "`def min_funksjon(4)`", "isCorrect": false}]}, {"content": "Hva er den viktigste forskjellen på `print` og `return`?", "answers": [{"content": "`return` sender et resultat tilbake til programmet slik at det kan lagres, mens `print` bare viser teksten på skjermen.", "isCorrect": true}, {"content": "De betyr akkurat det samme i Python.", "isCorrect": false}, {"content": "`return` kan bare brukes for tall, mens `print` bare er for tekstbeter.", "isCorrect": false}, {"content": "`print` avslutter funksjonen slik at den stopper.", "isCorrect": false}]}];
+
+                // Initialize the multiple-choice quiz
+                const quiz = new SequentialMultipleChoiceQuiz('quiz-container-8eb4097f7baf483cba63e5b46950f075', questionsData);
+            });
+        </script>
+        </div>
+</section>
+<hr class="docutils" />
+<section class="example-section" id="example-Eksempel-5">
+<h3>Eksempel 5<a class="headerlink" href="#example-Eksempel-5" title="Link to this heading">#</a></h3>
+<div class="example-body docutils container">
+<p>La oss kombinere funksjoner, <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker og <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setninger. Vi skal definere en funksjon som sjekker om et tall er partall eller oddetall, og deretter bruke en <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkke til å sjekke alle tall fra 1 til 10.</p>
+
+        <div id="container-code-1ffc6bb7"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`def par_eller_oddetall(n):
+    if n % 2 == 0:
+        return "partall"
+    else:
+        return "oddetall"
+
+print("Tall fra 1 til 10:")
+for tall in range(1, 11):
+    resultat = par_eller_oddetall(tall)
+    print(tall, "er" ,resultat)`;
+
+                makeInteractiveCode(
+                    "container-code-1ffc6bb7",
+                    code,
+                );
+            });
+        </script>
+        <div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<p>Funksjonen <code class="code docutils literal highlight highlight-python"><span class="n">par_eller_oddetall</span><span class="p">(</span><span class="n">n</span><span class="p">)</span></code> bruker en <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setning til å sjekke om <code class="docutils literal notranslate"><span class="pre">n</span></code> er delelig på 2. Hvis <code class="code docutils literal highlight highlight-python"><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span></code> (resten er 0), returnerer funksjonen “partall”, ellers returnerer den “oddetall”.</p>
+<p>Deretter bruker vi en <code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkke til å kalle funksjonen for alle tall fra 1 til 10. Vi lagrer resultatet og skriver det ut med f-strengen.</p>
+<p>Utskriften blir:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Tall fra 1 til 10:</span>
+<span class="go">1 er oddetall</span>
+<span class="go">2 er partall</span>
+<span class="go">3 er oddetall</span>
+<span class="go">4 er partall</span>
+<span class="go">5 er oddetall</span>
+<span class="go">6 er partall</span>
+<span class="go">7 er oddetall</span>
+<span class="go">8 er partall</span>
+<span class="go">9 er oddetall</span>
+<span class="go">10 er partall</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/programmering/funksjoner"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../if_setninger/oppgaver.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Oppgaver: if - else setninger</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="oppgaver.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Oppgaver: Funksjoner i Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Innhold
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definere-en-funksjon">Definere en funksjon</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-Definere-en-funksjon">Definere en funksjon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-1">Eksempel 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-Utforsk-1">Utforsk 1</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funksjoner-med-parametere">Funksjoner med parametere</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-2">Eksempel 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#returnere-en-verdi">Returnere en verdi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-return-l-python"><code class="code docutils literal highlight highlight-python"><span class="k">return</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explore-Utforsk-2">Utforsk 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-4">Eksempel 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Underveisoppgave-1">Underveisoppgave 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Underveisoppgave-2">Underveisoppgave 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Underveisoppgave-3">Underveisoppgave 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-Eksempel-5">Eksempel 5</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Av Torstein Flatval, Tiller Videregående Skole
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

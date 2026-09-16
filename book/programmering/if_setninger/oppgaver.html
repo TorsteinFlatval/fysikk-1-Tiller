@@ -1,0 +1,1222 @@
+
+<!DOCTYPE html>
+
+
+<html lang="norwegian" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Oppgaver: if - else setninger &#8212; Fysikk 1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/general_style.css?v=11bbc4b6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/admonitions.css?v=9237f12a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/popup.css?v=2d27c3a4" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/escape-room.css?v=bfeb5342" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/jeopardy.css?v=71d9bb06" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/legacy_1t/parsonsPuzzle.css?v=9fbab2c7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/static_code_blocks.css?v=68f9364b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/clickable_figures/style.css?v=d35dfce7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/style.css?v=b30732ed" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/mathjax/style.css?v=194b018e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/figures.css?v=46e199f0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/geogebra.css?v=fd180d66" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/grids.css?v=7667ba21" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/misc.css?v=55d93a12" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/popup_code.css?v=4b4feebf" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/misc_styles/tabs.css?v=a560da15" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/multipleChoiceQuiz/style.css?v=d667b426" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/general_style.css?v=dfcc20d4" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/escapeRoom/escape-room.css?v=9eb2d604" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/flashcards.css?v=816457f1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/interactive_code.css?v=44933e1a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/jeopardy.css?v=951b6e4f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/quiz.css?v=bc8164d8" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/admonitions.css?v=a3692687" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/dialogue.css?v=c5b7ed32" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/figures.css?v=acd93126" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/popup.css?v=26181dfd" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/timedQuiz.css?v=89e27729" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/cas_popup.css?v=bb968b84" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-light.css?v=0cccc4aa" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark.css?v=e9bcc25f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/github-dark-high-contrast.css?v=4c0c1b0f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/table.css?v=fd6d533f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/pairPuzzle/style.css?v=0a0f323a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/parsons/parsonsPuzzle.css?v=a1529215" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/part.css?v=bc286cc2" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/munchboka/css/print_pdf.css?v=448841f9" />
+    <link id="highlight-theme-light" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" />
+    <link id="highlight-theme-dark" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/general_style.css?v=11bbc4b6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/grid_print.css?v=73205d86" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/dialogue.css?v=1b585024" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/admonitions.css?v=f84a357c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/static_code_blocks.css?v=68f9364b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/interactiveCode/style.css?v=23cd07d5" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/parsons_puzzle/parsonsPuzzle.css?v=9fbab2c7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_default_cm.css?v=3beebd47" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_high_contrast_cm.css?v=4c0c1b0f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_cm.css?v=facc8b7a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_dark_cm.css?v=d1235728" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/one_dark_cm.css?v=3ae52176" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/code_mirror_themes/github_light_default_cm.css?v=c880a553" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pairPuzzle/style.css?v=f77426ac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/clickable_figures/style.css?v=d35dfce7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/tabs.css?v=a560da15" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/geogebra.css?v=fd180d66" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/popup_code.css?v=4b4feebf" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/figures.css?v=5dd46ff0" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/misc.css?v=55d93a12" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/misc_styles/grids.css?v=7667ba21" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mathjax/style.css?v=0f1cb662" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/multipleChoiceQuiz/style.css?v=89e27729" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../../_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="../../../_static/documentation_options.js?v=c712eed9"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/munchboka/fonts/opendyslexic/opendylexic-toggle.js?v=1652b728"></script>
+    <script src="../../../_static/munchboka/js/utils.js?v=b59157b9"></script>
+    <script src="../../../_static/munchboka/js/casThemeManager.js?v=88874cc7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <script src="../../../_static/munchboka/js/skulpt/skulpt.js?v=51c28977"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../../../_static/tabs.js?v=3ee01567"></script>
+    <script src="../../../_static/munchboka/js/solution_timer.js?v=192f5d3d"></script>
+    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="../../../_static/munchboka/js/flashcards.js?v=293ceac2"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/interactiveCodeSetup.js?v=ce240afa"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/codeEditor.js?v=d7a9df79"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/workerManager.js?v=024a7849"></script>
+    <script src="../../../_static/munchboka/js/interactiveCode/turtleCode.js?v=ecc68a76"></script>
+    <script src="../../../_static/munchboka/js/jeopardy.js?v=375a3583"></script>
+    <script src="../../../_static/munchboka/js/quiz.js?v=f8bcd7a1"></script>
+    <script>let toggleHintShow = 'Klikk for å vise';</script>
+    <script>let toggleHintHide = 'Klikk for å skjule';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/munchboka/js/popup.js?v=5db611f4"></script>
+    <script src="../../../_static/munchboka/js/timedQuiz/utils.js?v=2c6f871c"></script>
+    <script src="../../../_static/munchboka/js/timedQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="../../../_static/munchboka/js/timedQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"loader": {"load": ["[tex]/physics"]}, "tex": {"packages": {"[+]": ["physics"]}, "macros": {"annotateAbove": ["\\mathrel{\\overset{\\substack{\\text{#2} \\\\ \\Bigg\\downarrow}}{#1}}", 2], "annotateBelow": ["\\mathrel{\\underset{\\substack{\\Bigg\\uparrow \\\\ \\text{#2}}}{#1}}", 2], "cline": ["\\underline{\\phantom{#1}}", 1], "and": ["\\quad \\land \\quad"], "or": ["\\quad \\lor \\quad"], "liff": ["\\quad \\iff \\quad"], "limplies": ["\\quad \\implies \\quad"], "limpliedby": ["\\quad \\impliedby \\quad"], "lland": ["\\; \\land \\;"], "degree": ["^\\circ"], "qog": ["\\quad \\text{og} \\quad"], "qder": ["\\quad \\text{der} \\quad"], "qeller": ["\\quad \\text{eller} \\quad"], "qhvis": ["\\quad \\text{hvis} \\quad"], "qfor": ["\\quad \\text{for} \\quad"], "natural": ["\\mathbb{N}"], "integer": ["\\mathbb{Z}"], "rational": ["\\mathbb{Q}"], "real": ["\\mathbb{R}"], "irrational": ["\\mathbb{Q}^c"], "qcomma": [",\\quad"], "nimplies": ["\\quad\\mathrel{\\not\\!\\!\\!\\implies}\\quad"], "nimpliedby": ["\\quad\\mathrel{\\not\\!\\!\\!\\impliedby}\\quad"], "niff": ["\\quad\\mathrel{\\not\\!\\!\\!\\iff}\\quad"], "cubica": ["\\raisebox{-0.4ex}{\\small\\(\\frown\\!\\smile\\)}", 0], "cubicb": ["\\raisebox{-0.4ex}{\\small\\(\\smile\\!\\frown\\)}", 0], "t": ["\\mathrm{#1}", 1], "dot": ["\\vec{#1} \\cdot \\vec{#2}", 2], "len": ["\\abs{\\vec{#1}}", 1], "lvec": ["\\overrightarrow{#1}", 1], "v": ["\\left[#1, #2\\right]", 2], "proj": ["\\mathrm{proj}_{#1}\\left(#2\\right)", 2], "mstack": ["\\begin{array}{c}#1\\end{array}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3.2/es5/tex-mml-chtml.js"></script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'book/programmering/if_setninger/oppgaver';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script>mermaid.initialize({"startOnLoad": true})</script>
+    <script src="../../../_static/munchboka/js/pairPuzzle/draggableItem.js?v=ce9ef7bd"></script>
+    <script src="../../../_static/munchboka/js/pairPuzzle/dropZone.js?v=56907477"></script>
+    <script src="../../../_static/munchboka/js/pairPuzzle/game.js?v=cb8b0d45"></script>
+    <script src="../../../_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="../../../_static/munchboka/js/parsons/parsonsPuzzle.js?v=57870877"></script>
+    <script src="../../../_static/munchboka/js/print_answer_key.js?v=eebcd271"></script>
+    <script src="../../../_static/munchboka/js/solution2.js?v=a2d1029e"></script>
+    <script src="../../../_static/munchboka/js/part.js?v=ca40db03"></script>
+    <script src="../../../_static/munchboka/js/goals.js?v=a2f2d5f7"></script>
+    <script src="../../../_static/munchboka/js/proof.js?v=2793954e"></script>
+    <script src="../../../_static/munchboka/js/hint.js?v=9d6836a9"></script>
+    <script src="../../../_static/static_code_blocks.js?v=e512471c"></script>
+    <script src="../../../_static/utils.js?v=14803243"></script>
+    <script src="../../../_static/serviceWorker.js?v=19bb19ce"></script>
+    <script src="../../../_static/geogebra-setup.js?v=c67998b1"></script>
+    <script src="../../../_static/skulpt/skulpt.js?v=51c28977"></script>
+    <script src="../../../_static/interactiveCode/interactiveCodeSetup.js?v=49566f0b"></script>
+    <script src="../../../_static/interactiveCode/codeEditor.js?v=30f3f389"></script>
+    <script src="../../../_static/interactiveCode/turtleCode.js?v=0d62d95e"></script>
+    <script src="../../../_static/interactiveCode/workerManager.js?v=de8adb65"></script>
+    <script src="../../../_static/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
+    <script src="../../../_static/parsons_puzzle/theme-switcher.js?v=c0cdcaac"></script>
+    <script src="../../../_static/parsons_puzzle/parsonsPuzzle.js?v=6e8c8774"></script>
+    <script src="../../../_static/pairPuzzle/dropZone.js?v=56907477"></script>
+    <script src="../../../_static/pairPuzzle/draggableItem.js?v=5767251d"></script>
+    <script src="../../../_static/pairPuzzle/game.js?v=cb8b0d45"></script>
+    <script src="../../../_static/clickable_figures/clickable_figure.js?v=dd2467e6"></script>
+    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="../../../_static/multipleChoiceQuiz/sequentialMultipleChoiceQuiz.js?v=503540b6"></script>
+    <script src="../../../_static/multipleChoiceQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
+    <script src="../../../_static/multipleChoiceQuiz/utils.js?v=2c6f871c"></script>
+    <script src="../../../_static/multipleChoiceQuiz/multipleChoiceQuiz.js?v=7d161c2c"></script>
+    <script src="../../../_static/fonts/opendyslexic/opendylexic-toggle.js?v=7208047f"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="../../../_static/munchboka/js/highlight-init.js?v=6bc17905"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="../../../_static/munchboka/js/geogebra-setup.js?v=8e77fc11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Funksjoner med programmering" href="../funksjoner/teori.html" />
+    <link rel="prev" title="if-else-setninger" href="teori.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="norwegian"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../../_static/searchtools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../searchindex.js"></script>
+  
+<!-- Pyodide -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+
+
+<!-- CodeMirror -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+<link rel="stylesheet" href="../../../_static/code_mirror_themes/github_light_cm.css">
+<link rel="stylesheet" href="../../../_static/code_mirror_themes/github_dark_cm.css">
+<link rel="stylesheet" href="../../../_static/code_mirror_themes/one_dark_cm.css">
+
+<!-- CodeMirror scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- highlighting of code in Parsons puzzle -->
+<head>
+    <link id="highlight-theme-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
+    <link id="highlight-theme-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css">
+</head>
+
+
+
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch-improved@0.3.1/dist/jquery.ui.touch-punch-improved.min.js"></script>
+
+
+
+
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Fysikk 1</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programmering</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../for_l%C3%B8kker/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../for_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../while_l%C3%B8kker/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../while_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setninger</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../funksjoner/teori.html">Funksjoner med programmering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../funksjoner/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programmering i fysikk</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Programmering%20i%20fysikk/konstant%20akselerasjon/1E.html">Programmering av rettlinjet bevegelse</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Last ned denne siden">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/book/programmering/if_setninger/oppgaver.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Last ned kildefilen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Skriv ut til PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullskjerm-modus"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Oppgaver: if - else setninger</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Innhold </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-1">Oppgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-2">Oppgave 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-3">Oppgave 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-4">Oppgave 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-6">Oppgave 6</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="oppgaver-if-else-setninger">
+<h1>Oppgaver: if - else setninger<a class="headerlink" href="#oppgaver-if-else-setninger" title="Link to this heading">#</a></h1>
+<section class="exercise-section" id="exercise-Oppgave-1">
+<h2>Oppgave 1<a class="headerlink" href="#exercise-Oppgave-1" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>Ta quizen!</p>
+
+        <!-- Container for the quiz -->
+        <div id="quiz-container-e448ad89beca4ec8986b003083ead3ee" class="quiz-main-container"></div>
+        <!-- Include KaTeX for LaTeX rendering -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                // Define your questions and answers
+                const questionsData = [{"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">x = 10\nif x > 5:\n    print(\"x er større enn 5\")\nelse:\n    print(\"x er ikke større enn 5\")</code></pre>", "answers": [{"content": "x er større enn 5", "isCorrect": true}, {"content": "x er ikke større enn 5", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">x = 3\nif x > 5:\n    print(\"x er større enn 5\")\nelse:\n    print(\"x er ikke større enn 5\")</code></pre>", "answers": [{"content": "x er ikke større enn 5", "isCorrect": true}, {"content": "x er større enn 5", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">tall = 7\nif tall == 7:\n    print(\"Tallet er 7\")\nelse:\n    print(\"Tallet er ikke 7\")</code></pre>", "answers": [{"content": "Tallet er 7", "isCorrect": true}, {"content": "Tallet er ikke 7", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">alder = 16\nif alder >= 18:\n    print(\"Du er myndig\")\nelse:\n    print(\"Du er ikke myndig\")</code></pre>", "answers": [{"content": "Du er ikke myndig", "isCorrect": true}, {"content": "Du er myndig", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">x = 5\nif x != 5:\n    print(\"x er ikke 5\")\nelse:\n    print(\"x er 5\")</code></pre>", "answers": [{"content": "x er 5", "isCorrect": true}, {"content": "x er ikke 5", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}, {"content": "Hva blir skrevet ut av programmet? <pre><code class=\"python\">tall = -3\nif tall < 0:\n    print(\"Tallet er negativt\")\nelse:\n    print(\"Tallet er ikke negativt\")</code></pre>", "answers": [{"content": "Tallet er negativt", "isCorrect": true}, {"content": "Tallet er ikke negativt", "isCorrect": false}, {"content": "Begge blir skrevet ut", "isCorrect": false}, {"content": "Ingenting blir skrevet ut", "isCorrect": false}]}];
+
+                // Initialize the multiple-choice quiz
+                const quiz = new SequentialMultipleChoiceQuiz('quiz-container-e448ad89beca4ec8986b003083ead3ee', questionsData);
+            });
+        </script>
+        </div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-2">
+<h2>Oppgave 2<a class="headerlink" href="#exercise-Oppgave-2" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>Nedenfor vises noen programkoder med if-else-setninger. Les programmene og prøv å forutsi hva som blir skrevet ut.</p>
+<p>Skriv inn gjetningen din og sjekk svaret ditt for hvert av programmene.</p>
+<div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+a</label><div class="sd-tab-content docutils">
+
+        <div id="container-code-6fd9018a"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`x = 8
+if x > 10:
+    print("x er større enn 10")
+else:
+    print("x er ikke større enn 10")`;
+
+                makePredictionInteractiveCode(
+                    "container-code-6fd9018a",
+                    code,
+                );
+            });
+        </script>
+        </div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+b</label><div class="sd-tab-content docutils">
+
+        <div id="container-code-f746a1ff"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`navn = "Alice"
+if navn == "Bob":
+    print("Hallo Bob")
+else:
+    print("Du er ikke Bob")`;
+
+                makePredictionInteractiveCode(
+                    "container-code-f746a1ff",
+                    code,
+                );
+            });
+        </script>
+        </div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+c</label><div class="sd-tab-content docutils">
+
+        <div id="container-code-6a35061d"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`tall = 15
+if tall <= 10:
+    print("Tallet er 10 eller mindre")
+else:
+    print("Tallet er større enn 10")`;
+
+                makePredictionInteractiveCode(
+                    "container-code-6a35061d",
+                    code,
+                );
+            });
+        </script>
+        </div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+d</label><div class="sd-tab-content docutils">
+
+        <div id="container-code-9ea16900"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`alder = 25
+if alder < 18:
+    print("Du er barn")
+else:
+    print("Du er voksen")`;
+
+                makePredictionInteractiveCode(
+                    "container-code-9ea16900",
+                    code,
+                );
+            });
+        </script>
+        </div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-3">
+<h2>Oppgave 3<a class="headerlink" href="#exercise-Oppgave-3" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+a</label><div class="sd-tab-content docutils">
+<p>Fyll ut programmet nedenfor slik at det skriver ut “Tallet er positivt” dersom <code class="docutils literal notranslate"><span class="pre">x</span></code> er større enn 0, ellers skal det skrive ut “Tallet er ikke positivt”.</p>
+
+        <div id="container-code-7501258a"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`x = 5
+if ????:  # FYLL INN: bytt ut ????
+    print("Tallet er positivt")
+else:
+    print("Tallet er ikke positivt")`;
+
+                makeInteractiveCode(
+                    "container-code-7501258a",
+                    code,
+                );
+            });
+        </script>
+        <div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Tallet er positivt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="linenos">2</span><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tallet er positivt&quot;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tallet er ikke positivt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+b</label><div class="sd-tab-content docutils">
+<p>Fyll ut programmet nedenfor slik at det skriver ut “Du kan stemme” dersom alderen er 18 eller mer, ellers skal det skrive ut “Du kan ikke stemme”.</p>
+
+        <div id="container-code-b2d7878d"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`alder = 20
+if ????:  # FYLL INN: bytt ut ????
+    print("Du kan stemme")
+else:
+    print("Du kan ikke stemme")`;
+
+                makeInteractiveCode(
+                    "container-code-b2d7878d",
+                    code,
+                );
+            });
+        </script>
+        <div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Du kan stemme
+</pre></div>
+</div>
+</div>
+</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">alder</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="linenos">2</span><span class="k">if</span> <span class="n">alder</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
+<span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Du kan stemme&quot;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Du kan ikke stemme&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+c</label><div class="sd-tab-content docutils">
+<p>Fyll ut programmet nedenfor slik at det sjekker om tallet er partall eller oddetall.</p>
+
+        <div id="container-code-d9b0e64d"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`tall = 4
+if ????:  # FYLL INN: bytt ut ????
+    print("Tallet er partall")
+else:
+    print("Tallet er oddetall")`;
+
+                makeInteractiveCode(
+                    "container-code-d9b0e64d",
+                    code,
+                );
+            });
+        </script>
+        <div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Tallet er partall
+</pre></div>
+</div>
+</div>
+</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">tall</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="linenos">2</span><span class="k">if</span> <span class="n">tall</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tallet er partall&quot;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tallet er oddetall&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+d</label><div class="sd-tab-content docutils">
+<p>Fyll ut programmet nedenfor slik at det sjekker om ordet er “Python”, og skriver ut riktig melding.</p>
+
+        <div id="container-code-811b5f86"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`ord = "Python"
+if ????:  # FYLL INN: bytt ut ????
+    print("Det er Python!")
+else:
+    print("Det er ikke Python")`;
+
+                makeInteractiveCode(
+                    "container-code-811b5f86",
+                    code,
+                );
+            });
+        </script>
+        <div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Det er Python!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">ord</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="linenos">2</span><span class="k">if</span> <span class="nb">ord</span> <span class="o">==</span> <span class="s2">&quot;Python&quot;</span><span class="p">:</span>
+<span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Det er Python!&quot;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Det er ikke Python&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-4">
+<h2>Oppgave 4<a class="headerlink" href="#exercise-Oppgave-4" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
+a</label><div class="sd-tab-content docutils">
+<p>Skriv et fullstendig program som sjekker om et tall <code class="docutils literal notranslate"><span class="pre">x</span></code> er mindre enn 100. Dersom det er det, skal det skrive ut “Tallet er mindre enn 100”, ellers “Tallet er 100 eller større”.</p>
+
+        <div id="container-code-f7a09be2"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`x = 50
+# FYLL INN: skriv hele programmet`;
+
+                makeInteractiveCode(
+                    "container-code-f7a09be2",
+                    code,
+                );
+            });
+        </script>
+        <div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Tallet er mindre enn 100
+</pre></div>
+</div>
+</div>
+</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">x</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="linenos">2</span><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+<span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tallet er mindre enn 100&quot;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tallet er 100 eller større&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-9">
+b</label><div class="sd-tab-content docutils">
+<p>Skriv et program som sjekker om lengden av strengen <code class="docutils literal notranslate"><span class="pre">tekst</span></code> er større enn 5 tegn. Hvis den er lengre, skal det skrive ut “Teksten er lang”, ellers “Teksten er kort”.</p>
+
+        <div id="container-code-b040aa3b"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`tekst = "Hello"
+# FYLL INN: skriv hele programmet`;
+
+                makeInteractiveCode(
+                    "container-code-b040aa3b",
+                    code,
+                );
+            });
+        </script>
+        <div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Teksten er kort
+</pre></div>
+</div>
+</div>
+</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">tekst</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="linenos">2</span><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tekst</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+<span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Teksten er lang&quot;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Teksten er kort&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-10" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-10">
+c</label><div class="sd-tab-content docutils">
+<p>Skriv et program som sjekker om tallet <code class="docutils literal notranslate"><span class="pre">x</span></code> ligger mellom 0 og 10 (inkludert). Hvis det gjør det, skal det skrive ut “Tallet er mellom 0 og 10”, ellers “Tallet er ikke mellom 0 og 10”.</p>
+<p><strong>Hint:</strong> Du trenger å sjekke to betingelser med <code class="docutils literal notranslate"><span class="pre">and</span></code>.</p>
+
+        <div id="container-code-4f9616a9"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`x = 7
+# FYLL INN: skriv hele programmet`;
+
+                makeInteractiveCode(
+                    "container-code-4f9616a9",
+                    code,
+                );
+            });
+        </script>
+        <div class="answer-2 docutils container">
+<button class="answer-2-toggle" aria-expanded="false" data-label="Vis fasit">Vis fasit</button><div class="answer-2-content docutils container">
+<p>Utskrift:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Tallet er mellom 0 og 10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="solution-2 docutils container">
+<button class="solution-2-toggle" aria-expanded="false" data-label="Vis løsningsforslag">Vis løsningsforslag</button><div class="solution-2-content docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">x</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="linenos">2</span><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+<span class="linenos">3</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tallet er mellom 0 og 10&quot;</span><span class="p">)</span>
+<span class="linenos">4</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">5</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tallet er ikke mellom 0 og 10&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="exercise-section" id="exercise-Oppgave-5">
+<h3>Oppgave 5<a class="headerlink" href="#exercise-Oppgave-5" title="Link to this heading">#</a></h3>
+<div class="exercise-body docutils container">
+<p>Alma og Synne snakker om en annen strategi for å skrive ut partall og oddetall.</p>
+<div class="dialogue"><div class="dialogue-entry speaker1"><div class="speaker-name">Alma</div><p>Jeg har en annen idé for å skrive ut partallene på. Vi kan lage en løkke som går gjennom alle naturlige tall og sjekker om det er et partall.</p>
+</div><div class="dialogue-entry speaker2"><div class="speaker-name">Synne</div><p>Det er en god idé! Da kan vi bruke en <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-setning for å sjekke om tallet er partall.</p>
+</div><div class="dialogue-entry speaker1"><div class="speaker-name">Alma</div><p>Men hvordan sjekker vi at et tall er et partall igjen?</p>
+</div><div class="dialogue-entry speaker2"><div class="speaker-name">Synne</div><p>Det er vel bare å sjekke om det er delelig med <span class="math notranslate nohighlight">\(2\)</span>? Jeg har lest at det kan man gjøre ved å skrive <br> <code class="code docutils literal highlight highlight-python"><span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span></code></p>
+</div></div><div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-12" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-12">
+a</label><div class="sd-tab-content docutils">
+<p>Fyll ut programmet nedenfor slik at det skriver ut alle partallene til og med <span class="math notranslate nohighlight">\(20\)</span> ved hjelp av en <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-setning.</p>
+
+        <div id="container-code-cea6cfcc"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`for n in range(????): # FYLL INN: bytt ut ???? med riktige tall
+    if ????: # Sjekk om n er et partall
+        print(n)
+`;
+
+                makeInteractiveCode(
+                    "container-code-cea6cfcc",
+                    code,
+                );
+            });
+        </script>
+        </div>
+</div>
+</div>
+</section>
+</div>
+<input id="sd-tab-item-11" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-11">
+b</label><div class="sd-tab-content docutils">
+<p>Alma og Synne fortsetter samtalen.</p>
+<div class="dialogue"><div class="dialogue-entry speaker1"><div class="speaker-name">Alma</div><p>Ok, så nå klarer vi å skrive ut partall ved å sjekke om et tall er delelig med <span class="math notranslate nohighlight">\(2\)</span>. Men hva med oddetallene?</p>
+</div><div class="dialogue-entry speaker2"><div class="speaker-name">Synne</div><p>Da har jeg lest at vi kan bruke en <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setning. Hvis tallet er delelig med <span class="math notranslate nohighlight">\(2\)</span>, så gjør vi ingenting. Da kan vi bruke <code class="code docutils literal highlight highlight-python"><span class="k">pass</span></code>. Og så skriver vi ut tallet hvis det ikke er delelig med <span class="math notranslate nohighlight">\(2\)</span>.</p>
+</div></div><br>
+<p>Bruk strategien til Alma og Synne i programmet nedenfor.</p>
+
+        <div id="container-code-40199674"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`for n in range(????): # FYLL INN: bytt ut ???? med riktige tall
+    if ????: # Sjekk om n er et partall
+        # FYLL INN: gjør ingenting her!
+    else:
+        # FYLL INN: skriv ut tallet hvis det er et oddetall
+`;
+
+                makeInteractiveCode(
+                    "container-code-40199674",
+                    code,
+                );
+            });
+        </script>
+        </div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section class="exercise-section" id="exercise-Oppgave-6">
+<h2>Oppgave 6<a class="headerlink" href="#exercise-Oppgave-6" title="Link to this heading">#</a></h2>
+<div class="exercise-body docutils container">
+<p>Alma og Synne snakker om hvordan man kan avgjøre om et tall <span class="math notranslate nohighlight">\(p \in \mathbb{N}\)</span> er et primtall med et program.</p>
+<div class="dialogue"><div class="dialogue-entry speaker1"><div class="speaker-name">Alma</div><p>Jeg har lest at et primtall er et tall som bare er delelig med <span class="math notranslate nohighlight">\(1\)</span> og seg selv.</p>
+</div><div class="dialogue-entry speaker2"><div class="speaker-name">Synne</div><p>Ja, det stemmer! Så hvis vi skal sjekke om et tall <span class="math notranslate nohighlight">\(n\)</span> er et primtall, så må vi sjekke om det er delelig med alle tallene fra <span class="math notranslate nohighlight">\(2\)</span> til <span class="math notranslate nohighlight">\(p - 1\)</span>.</p>
+</div><div class="dialogue-entry speaker1"><div class="speaker-name">Alma</div><p>Ja, men hvordan gjør vi det i et program?</p>
+</div><div class="dialogue-entry speaker2"><div class="speaker-name">Synne</div><p>Vi kan bruke en løkke som går gjennom alle tallene <span class="math notranslate nohighlight">\(n \in \{2, 3, \ldots, p - 1\}\)</span> og sjekker om <span class="math notranslate nohighlight">\(p\)</span> er delelig med hvert av dem. Da kan vi vel bruke en <code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-setning litt som når vi sjekket om et tall var delelig med <span class="math notranslate nohighlight">\(2\)</span>?</p>
+</div></div><div class="sd-tab-set tabs-parts docutils">
+<input checked="checked" id="sd-tab-item-13" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-13">
+a</label><div class="sd-tab-content docutils">
+<p>Bruk strategien til Alma og Synne i programmet nedenfor. Sjekk at tallene <span class="math notranslate nohighlight">\(11\)</span>, <span class="math notranslate nohighlight">\(51\)</span> og <span class="math notranslate nohighlight">\(729\)</span> er primtall.</p>
+</div>
+<input id="sd-tab-item-14" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-14">
+b</label><div class="sd-tab-content docutils">
+<p>Alma og Synne er ikke helt fornøyde.</p>
+<div class="dialogue"><div class="dialogue-entry speaker1"><div class="speaker-name">Alma</div><p>Men nå sjekker vi jo fryktelig mange tall. Trenger vi å sjekke alle tallene fra <span class="math notranslate nohighlight">\(2\)</span> til <span class="math notranslate nohighlight">\(p - 1\)</span>?</p>
+</div><div class="dialogue-entry speaker2"><div class="speaker-name">Synne</div><p>Nei! Vi trenger bare å sjekke tallene opp til <span class="math notranslate nohighlight">\(\sqrt{p}\)</span>. Hvis <span class="math notranslate nohighlight">\(p\)</span> er delelig med et tall større enn <span class="math notranslate nohighlight">\(\sqrt{p}\)</span>, så må det også være delelig med et tall mindre enn <span class="math notranslate nohighlight">\(\sqrt{p}\)</span>.</p>
+</div><div class="dialogue-entry speaker1"><div class="speaker-name">Alma</div><p>Hvorfor er det slik?</p>
+</div><div class="dialogue-entry speaker2"><div class="speaker-name">Synne</div><p>Det er jeg ikke sikker på. Var bare noe jeg så på Insta. Men hvordan regner vi ut <span class="math notranslate nohighlight">\(\sqrt{p}\)</span> i et program?</p>
+</div><div class="dialogue-entry speaker1"><div class="speaker-name">Alma</div><p>Det er enkelt! Vi kan bruke <code class="code docutils literal highlight highlight-python"><span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">)</span></code></p>
+</div></div><br>
+<p>Endre på programmet ditt og prøv ut strategien de snakker om.</p>
+</div>
+<input id="sd-tab-item-15" name="sd-tab-set-4" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-15">
+c</label><div class="sd-tab-content docutils">
+<p>Argumenter for at det største tallet man trenger å sjekke for å avgjøre om et tall <span class="math notranslate nohighlight">\(p\)</span> er et primtall, er <span class="math notranslate nohighlight">\(\sqrt{p}\)</span>.</p>
+</div>
+</div>
+
+        <div id="container-code-273011d6"></div>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const code = 
+`# Din kode her
+
+
+`;
+
+                makeInteractiveCode(
+                    "container-code-273011d6",
+                    code,
+                );
+            });
+        </script>
+        </div>
+</section>
+<hr class="docutils" />
+<div class="docutils">
+</div>
+<div class="docutils">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./book/programmering/if_setninger"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="teori.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setninger</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../funksjoner/teori.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Funksjoner med programmering</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Innhold
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-1">Oppgave 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-2">Oppgave 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-3">Oppgave 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-4">Oppgave 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-Oppgave-6">Oppgave 6</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Av Torstein Flatval, Tiller Videregående Skole
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

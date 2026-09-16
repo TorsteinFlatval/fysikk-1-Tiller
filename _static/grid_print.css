@@ -1,0 +1,285 @@
+/* ========================================
+   GRID PRINT STYLES FOR PDF OUTPUT
+   ========================================
+   
+   This file handles grid and grid-item-card formatting for PDF export.
+   
+   Features:
+   1. Prevent page breaks inside grid items
+   2. Preserve grid layout with proper column counts
+   3. Optimize spacing for print media
+   4. Handle various grid configurations (1 1 2 2, 1 2 2 2, etc.)
+   
+   Grid directive format: {grid} <xs> <sm> <md> <lg>
+   - xs: phone portrait (< 576px)
+   - sm: phone landscape (576px - 768px)
+   - md: tablet (768px - 992px)
+   - lg: desktop (> 992px)
+   
+   For PDF output, we use the lg (last) value to determine column count.
+   
+   ======================================== */
+
+@media print {
+    /* ========================================
+       1. PREVENT PAGE BREAKS IN GRID ITEMS
+       ======================================== */
+    
+    /* Prevent page breaks inside grid items */
+    .sd-card,
+    .sd-card-body,
+    .sd-grid > .sd-col-xs-12,
+    .sd-grid > [class*="sd-col-"] {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        -webkit-column-break-inside: avoid !important;
+    }
+    
+    /* Keep card content together */
+    .sd-card-header,
+    .sd-card-text,
+    .sd-card-footer {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+    
+    /* Allow page breaks between cards when necessary */
+    .sd-card {
+        page-break-before: auto;
+        page-break-after: auto;
+    }
+    
+    /* ========================================
+       2. PRESERVE GRID LAYOUT FOR PRINT
+       ======================================== */
+    
+    /* Ensure grid container displays properly */
+    .sd-container-fluid {
+        width: 100% !important;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    /* Ensure grid row displays as flexbox */
+    .sd-row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-right: -0.5rem;
+        margin-left: -0.5rem;
+    }
+    
+    /* Base styling for all grid columns */
+    .sd-col {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        box-sizing: border-box;
+    }
+    
+    /* ========================================
+       3. COLUMN WIDTH DEFINITIONS (ROW-COLS)
+       ======================================== */
+    
+    /* Single column layout (100% width) */
+    .sd-row-cols-lg-1 > .sd-col {
+        flex: 0 0 auto;
+        width: 100% !important;
+    }
+    
+    /* Two column layout (50% width) */
+    .sd-row-cols-lg-2 > .sd-col {
+        flex: 0 0 auto;
+        width: 50% !important;
+    }
+    
+    /* Three column layout (33.33% width) */
+    .sd-row-cols-lg-3 > .sd-col {
+        flex: 0 0 auto;
+        width: 33.333333% !important;
+    }
+    
+    /* Four column layout (25% width) */
+    .sd-row-cols-lg-4 > .sd-col {
+        flex: 0 0 auto;
+        width: 25% !important;
+    }
+    
+    /* Six column layout (16.66% width) */
+    .sd-row-cols-lg-6 > .sd-col {
+        flex: 0 0 auto;
+        width: 16.666667% !important;
+    }
+    
+    /* Twelve column layout (8.33% width) */
+    .sd-row-cols-lg-12 > .sd-col {
+        flex: 0 0 auto;
+        width: 8.333333% !important;
+    }
+    
+    /* ========================================
+       4. CARD STYLING FOR PRINT
+       ======================================== */
+    
+    /* Ensure cards have proper borders and spacing */
+    .sd-card {
+        border: 1px solid #ddd !important;
+        border-radius: 4px !important;
+        padding: 1rem !important;
+        background-color: white !important;
+        box-shadow: none !important;
+        height: auto !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    /* Card header styling */
+    .sd-card-header {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    /* Card body styling */
+    .sd-card-body {
+        margin-top: 0.5rem;
+    }
+    
+    /* Card footer styling */
+    .sd-card-footer {
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid #e0e0e0;
+        font-size: 0.9em;
+        color: #666;
+    }
+    
+    /* ========================================
+       5. GUTTER SPACING
+       ======================================== */
+    
+    /* Gutter level 1 (small spacing) */
+    .sd-g-lg-1,
+    .sd-g-1 {
+        --bs-gutter-x: 0.25rem !important;
+        --bs-gutter-y: 0.25rem !important;
+    }
+    
+    .sd-g-lg-1 > .sd-col,
+    .sd-g-1 > .sd-col {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+    
+    /* Gutter level 2 (medium spacing) */
+    .sd-g-lg-2,
+    .sd-g-2 {
+        --bs-gutter-x: 0.5rem !important;
+        --bs-gutter-y: 0.5rem !important;
+    }
+    
+    .sd-g-lg-2 > .sd-col,
+    .sd-g-2 > .sd-col {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+    
+    /* Gutter level 3 (large spacing) */
+    .sd-g-lg-3,
+    .sd-g-3 {
+        --bs-gutter-x: 1rem !important;
+        --bs-gutter-y: 1rem !important;
+    }
+    
+    .sd-g-lg-3 > .sd-col,
+    .sd-g-3 > .sd-col {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+    
+    /* Gutter level 4 (extra large spacing) */
+    .sd-g-lg-4,
+    .sd-g-4 {
+        --bs-gutter-x: 1.5rem !important;
+        --bs-gutter-y: 1.5rem !important;
+    }
+    
+    .sd-g-lg-4 > .sd-col,
+    .sd-g-4 > .sd-col {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+    
+    /* ========================================
+       6. ORPHAN AND WIDOW CONTROL
+       ======================================== */
+    
+    /* Prevent orphan/widow lines in cards */
+    .sd-card p,
+    .sd-card-body p {
+        orphans: 2;
+        widows: 2;
+    }
+    
+    /* ========================================
+       7. SPECIAL HANDLING FOR NESTED CONTENT
+       ======================================== */
+    
+    /* Ensure figures inside cards stay contained */
+    .sd-card figure,
+    .sd-card img {
+        max-width: 100%;
+        height: auto;
+        page-break-inside: avoid;
+    }
+    
+    /* Ensure code blocks inside cards are readable */
+    .sd-card pre,
+    .sd-card code {
+        font-size: 0.85em;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    /* Ensure math content inside cards renders properly */
+    .sd-card .math,
+    .sd-card .MathJax {
+        font-size: 1em !important;
+    }
+    
+    /* ========================================
+       8. GRID ROW HANDLING
+       ======================================== */
+    
+    /* Ensure proper row breaks in multi-column layouts */
+    .sd-grid::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* ========================================
+       9. RESPONSIVE FALLBACK
+       ======================================== */
+    
+    /* Ensure proper display of flex columns */
+    .sd-d-flex-row {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    
+    /* Margin bottom for spacing between rows */
+    .sd-mb-4 {
+        margin-bottom: 1.5rem !important;
+    }
+}

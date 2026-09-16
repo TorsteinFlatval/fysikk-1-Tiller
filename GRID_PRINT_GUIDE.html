@@ -1,0 +1,1039 @@
+
+<!DOCTYPE html>
+
+
+<html lang="norwegian" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Grid Print Formatting Guide &#8212; Fysikk 1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/legacy_1t/general_style.css?v=11bbc4b6" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/legacy_1t/admonitions.css?v=9237f12a" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/legacy_1t/popup.css?v=2d27c3a4" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/legacy_1t/escape-room.css?v=bfeb5342" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/legacy_1t/jeopardy.css?v=71d9bb06" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/legacy_1t/parsonsPuzzle.css?v=9fbab2c7" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/static_code_blocks.css?v=68f9364b" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/clickable_figures/style.css?v=d35dfce7" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/escapeRoom/style.css?v=b30732ed" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/mathjax/style.css?v=194b018e" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/misc_styles/figures.css?v=46e199f0" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/misc_styles/geogebra.css?v=fd180d66" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/misc_styles/grids.css?v=7667ba21" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/misc_styles/misc.css?v=55d93a12" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/misc_styles/popup_code.css?v=4b4feebf" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/misc_styles/tabs.css?v=a560da15" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/multipleChoiceQuiz/style.css?v=d667b426" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/general_style.css?v=dfcc20d4" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/escapeRoom/escape-room.css?v=9eb2d604" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/flashcards.css?v=816457f1" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/interactive_code.css?v=44933e1a" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/jeopardy.css?v=951b6e4f" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/quiz.css?v=bc8164d8" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/admonitions.css?v=a3692687" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/dialogue.css?v=c5b7ed32" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/figures.css?v=acd93126" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/popup.css?v=26181dfd" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/timedQuiz.css?v=89e27729" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/cas_popup.css?v=bb968b84" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/github-light.css?v=0cccc4aa" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/github-dark.css?v=e9bcc25f" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/github-dark-high-contrast.css?v=4c0c1b0f" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/table.css?v=fd6d533f" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/pairPuzzle/style.css?v=0a0f323a" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/parsons/parsonsPuzzle.css?v=a1529215" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/part.css?v=bc286cc2" />
+    <link rel="stylesheet" type="text/css" href="_static/munchboka/css/print_pdf.css?v=448841f9" />
+    <link id="highlight-theme-light" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" />
+    <link id="highlight-theme-dark" rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/general_style.css?v=11bbc4b6" />
+    <link rel="stylesheet" type="text/css" href="_static/grid_print.css?v=73205d86" />
+    <link rel="stylesheet" type="text/css" href="_static/dialogue.css?v=1b585024" />
+    <link rel="stylesheet" type="text/css" href="_static/admonitions.css?v=f84a357c" />
+    <link rel="stylesheet" type="text/css" href="_static/static_code_blocks.css?v=68f9364b" />
+    <link rel="stylesheet" type="text/css" href="_static/interactiveCode/style.css?v=23cd07d5" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons_puzzle/parsonsPuzzle.css?v=9fbab2c7" />
+    <link rel="stylesheet" type="text/css" href="_static/code_mirror_themes/github_dark_default_cm.css?v=3beebd47" />
+    <link rel="stylesheet" type="text/css" href="_static/code_mirror_themes/github_dark_high_contrast_cm.css?v=4c0c1b0f" />
+    <link rel="stylesheet" type="text/css" href="_static/code_mirror_themes/github_light_cm.css?v=facc8b7a" />
+    <link rel="stylesheet" type="text/css" href="_static/code_mirror_themes/github_dark_cm.css?v=d1235728" />
+    <link rel="stylesheet" type="text/css" href="_static/code_mirror_themes/one_dark_cm.css?v=3ae52176" />
+    <link rel="stylesheet" type="text/css" href="_static/code_mirror_themes/github_light_default_cm.css?v=c880a553" />
+    <link rel="stylesheet" type="text/css" href="_static/pairPuzzle/style.css?v=f77426ac" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable_figures/style.css?v=d35dfce7" />
+    <link rel="stylesheet" type="text/css" href="_static/misc_styles/tabs.css?v=a560da15" />
+    <link rel="stylesheet" type="text/css" href="_static/misc_styles/geogebra.css?v=fd180d66" />
+    <link rel="stylesheet" type="text/css" href="_static/misc_styles/popup_code.css?v=4b4feebf" />
+    <link rel="stylesheet" type="text/css" href="_static/misc_styles/figures.css?v=5dd46ff0" />
+    <link rel="stylesheet" type="text/css" href="_static/misc_styles/misc.css?v=55d93a12" />
+    <link rel="stylesheet" type="text/css" href="_static/misc_styles/grids.css?v=7667ba21" />
+    <link rel="stylesheet" type="text/css" href="_static/mathjax/style.css?v=0f1cb662" />
+    <link rel="stylesheet" type="text/css" href="_static/multipleChoiceQuiz/style.css?v=89e27729" />
+    <link rel="stylesheet" type="text/css" href="_static/fonts/opendyslexic/dyslexic.css?v=80f1227b" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=c712eed9"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/munchboka/fonts/opendyslexic/opendylexic-toggle.js?v=1652b728"></script>
+    <script src="_static/munchboka/js/utils.js?v=b59157b9"></script>
+    <script src="_static/munchboka/js/casThemeManager.js?v=88874cc7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <script src="_static/munchboka/js/skulpt/skulpt.js?v=51c28977"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="_static/tabs.js?v=3ee01567"></script>
+    <script src="_static/munchboka/js/solution_timer.js?v=192f5d3d"></script>
+    <script src="_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="_static/munchboka/js/flashcards.js?v=293ceac2"></script>
+    <script src="_static/munchboka/js/interactiveCode/interactiveCodeSetup.js?v=ce240afa"></script>
+    <script src="_static/munchboka/js/interactiveCode/codeEditor.js?v=d7a9df79"></script>
+    <script src="_static/munchboka/js/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
+    <script src="_static/munchboka/js/interactiveCode/workerManager.js?v=024a7849"></script>
+    <script src="_static/munchboka/js/interactiveCode/turtleCode.js?v=ecc68a76"></script>
+    <script src="_static/munchboka/js/jeopardy.js?v=375a3583"></script>
+    <script src="_static/munchboka/js/quiz.js?v=f8bcd7a1"></script>
+    <script>let toggleHintShow = 'Klikk for å vise';</script>
+    <script>let toggleHintHide = 'Klikk for å skjule';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script src="_static/munchboka/js/popup.js?v=5db611f4"></script>
+    <script src="_static/munchboka/js/timedQuiz/utils.js?v=2c6f871c"></script>
+    <script src="_static/munchboka/js/timedQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="_static/munchboka/js/timedQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'GRID_PRINT_GUIDE';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script>mermaid.initialize({"startOnLoad": true})</script>
+    <script src="_static/munchboka/js/pairPuzzle/draggableItem.js?v=ce9ef7bd"></script>
+    <script src="_static/munchboka/js/pairPuzzle/dropZone.js?v=56907477"></script>
+    <script src="_static/munchboka/js/pairPuzzle/game.js?v=cb8b0d45"></script>
+    <script src="_static/munchboka/js/escapeRoom/escape-room.js?v=1498b374"></script>
+    <script src="_static/munchboka/js/parsons/parsonsPuzzle.js?v=57870877"></script>
+    <script src="_static/munchboka/js/print_answer_key.js?v=eebcd271"></script>
+    <script src="_static/munchboka/js/solution2.js?v=a2d1029e"></script>
+    <script src="_static/munchboka/js/part.js?v=ca40db03"></script>
+    <script src="_static/munchboka/js/goals.js?v=a2f2d5f7"></script>
+    <script src="_static/munchboka/js/proof.js?v=2793954e"></script>
+    <script src="_static/munchboka/js/hint.js?v=9d6836a9"></script>
+    <script src="_static/static_code_blocks.js?v=e512471c"></script>
+    <script src="_static/utils.js?v=14803243"></script>
+    <script src="_static/serviceWorker.js?v=19bb19ce"></script>
+    <script src="_static/geogebra-setup.js?v=c67998b1"></script>
+    <script src="_static/skulpt/skulpt.js?v=51c28977"></script>
+    <script src="_static/interactiveCode/interactiveCodeSetup.js?v=49566f0b"></script>
+    <script src="_static/interactiveCode/codeEditor.js?v=30f3f389"></script>
+    <script src="_static/interactiveCode/turtleCode.js?v=0d62d95e"></script>
+    <script src="_static/interactiveCode/workerManager.js?v=de8adb65"></script>
+    <script src="_static/interactiveCode/pythonRunner.js?v=e9f0c2d2"></script>
+    <script src="_static/parsons_puzzle/theme-switcher.js?v=c0cdcaac"></script>
+    <script src="_static/parsons_puzzle/parsonsPuzzle.js?v=6e8c8774"></script>
+    <script src="_static/pairPuzzle/dropZone.js?v=56907477"></script>
+    <script src="_static/pairPuzzle/draggableItem.js?v=5767251d"></script>
+    <script src="_static/pairPuzzle/game.js?v=cb8b0d45"></script>
+    <script src="_static/clickable_figures/clickable_figure.js?v=dd2467e6"></script>
+    <script src="_static/multipleChoiceQuiz/multipleChoiceQuestion.js?v=c6ce1ca2"></script>
+    <script src="_static/multipleChoiceQuiz/sequentialMultipleChoiceQuiz.js?v=503540b6"></script>
+    <script src="_static/multipleChoiceQuiz/timedMultipleChoiceQuiz.js?v=9accc73d"></script>
+    <script src="_static/multipleChoiceQuiz/utils.js?v=2c6f871c"></script>
+    <script src="_static/multipleChoiceQuiz/multipleChoiceQuiz.js?v=7d161c2c"></script>
+    <script src="_static/fonts/opendyslexic/opendylexic-toggle.js?v=7208047f"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="_static/munchboka/js/highlight-init.js?v=6bc17905"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="_static/munchboka/js/geogebra-setup.js?v=8e77fc11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="norwegian"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+<!-- Pyodide -->
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.0/full/pyodide.js"></script>
+
+
+<!-- CodeMirror -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+<link rel="stylesheet" href="_static/code_mirror_themes/github_light_cm.css">
+<link rel="stylesheet" href="_static/code_mirror_themes/github_dark_cm.css">
+<link rel="stylesheet" href="_static/code_mirror_themes/one_dark_cm.css">
+
+<!-- CodeMirror scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- highlighting of code in Parsons puzzle -->
+<head>
+    <link id="highlight-theme-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
+    <link id="highlight-theme-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github-dark.min.css">
+</head>
+
+
+
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch-improved@0.3.1/dist/jquery.ui.touch-punch-improved.min.js"></script>
+
+
+
+
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Fysikk 1</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programmering</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/programmering/for_l%C3%B8kker/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">for</span></code>-løkker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/programmering/for_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/programmering/while_l%C3%B8kker/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">while</span></code>-løkker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/programmering/while_l%C3%B8kker/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/programmering/if_setninger/teori.html"><code class="code docutils literal highlight highlight-python"><span class="k">if</span></code>-<code class="code docutils literal highlight highlight-python"><span class="k">else</span></code>-setninger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/programmering/if_setninger/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/programmering/funksjoner/teori.html">Funksjoner med programmering</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="book/programmering/funksjoner/oppgaver.html">Oppgaver</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programmering i fysikk</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="book/Programmering%20i%20fysikk/konstant%20akselerasjon/1E.html">Programmering av rettlinjet bevegelse</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Last ned denne siden">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/GRID_PRINT_GUIDE.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Last ned kildefilen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Skriv ut til PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullskjerm-modus"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Grid Print Formatting Guide</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Innhold </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#css-files">CSS Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-directive-format">Grid Directive Format</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-grid-configurations">Common Grid Configurations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-example">Usage Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gutter-options">Gutter Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#card-structure">Card Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keep-cards-concise">1. Keep Cards Concise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#balance-content">2. Balance Content</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-appropriate-grid-sizes">3. Use Appropriate Grid Sizes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-pdf-output">4. Test PDF Output</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-cards-are-breaking-across-pages">Problem: Cards are breaking across pages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-layout-looks-wrong-in-pdf">Problem: Layout looks wrong in PDF</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-cards-appear-too-wide-narrow">Problem: Cards appear too wide/narrow</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-notes">Implementation Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works">How It Works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#css-specificity">CSS Specificity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-compatibility">Browser Compatibility</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-pdfs">Building PDFs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-files">Related Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-or-issues">Questions or Issues?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="grid-print-formatting-guide">
+<h1>Grid Print Formatting Guide<a class="headerlink" href="#grid-print-formatting-guide" title="Link to this heading">#</a></h1>
+<p>This guide explains how to properly format <code class="docutils literal notranslate"><span class="pre">grid</span></code> and <code class="docutils literal notranslate"><span class="pre">grid-item-card</span></code> directives for PDF output.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>The grid print formatting system ensures that:</p>
+<ol class="arabic simple">
+<li><p>Each <code class="docutils literal notranslate"><span class="pre">grid-item-card</span></code> stays on a single page (no page breaks within cards)</p></li>
+<li><p>Layout is preserved based on the grid column specification</p></li>
+<li><p>Optimal spacing and formatting for print media</p></li>
+</ol>
+</section>
+<section id="css-files">
+<h2>CSS Files<a class="headerlink" href="#css-files" title="Link to this heading">#</a></h2>
+<p>Two CSS files handle grid print formatting:</p>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">_static/grid_print.css</span></code></strong> (matematikk_r1 specific)</p>
+<ul class="simple">
+<li><p>Comprehensive grid and card print styling</p></li>
+<li><p>Column width definitions</p></li>
+<li><p>Gutter spacing controls</p></li>
+<li><p>Card content formatting</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">munchboka-edutools/src/munchboka_edutools/static/css/print_pdf.css</span></code></strong></p>
+<ul class="simple">
+<li><p>Updated with basic grid print support</p></li>
+<li><p>Integrated with other print features</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="grid-directive-format">
+<h2>Grid Directive Format<a class="headerlink" href="#grid-directive-format" title="Link to this heading">#</a></h2>
+<p>The grid directive uses the format:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>{grid} &lt;xs&gt; &lt;sm&gt; &lt;md&gt; &lt;lg&gt;
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">xs</span></code>: phone portrait (&lt; 576px)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sm</span></code>: phone landscape (576px - 768px)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">md</span></code>: tablet (768px - 992px)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lg</span></code>: desktop (&gt; 992px) - <strong>This value is used for PDF output</strong></p></li>
+</ul>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>{grid} 1 1 2 2
+</pre></div>
+</div>
+<p>This means:</p>
+<ul class="simple">
+<li><p>Mobile portrait: 1 column</p></li>
+<li><p>Mobile landscape: 1 column</p></li>
+<li><p>Tablet: 2 columns</p></li>
+<li><p>Desktop/PDF: <strong>2 columns</strong> (2 cards side-by-side)</p></li>
+</ul>
+</section>
+</section>
+<section id="common-grid-configurations">
+<h2>Common Grid Configurations<a class="headerlink" href="#common-grid-configurations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Grid Spec</p></th>
+<th class="head"><p>Mobile</p></th>
+<th class="head"><p>Tablet</p></th>
+<th class="head"><p>PDF Layout</p></th>
+<th class="head"><p>Use Case</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">2</span></code></p></td>
+<td><p>1 col</p></td>
+<td><p>2 cols</p></td>
+<td><p><strong>2 cards side-by-side</strong></p></td>
+<td><p>Overview pages, paired content</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">2</span> <span class="pre">2</span> <span class="pre">2</span></code></p></td>
+<td><p>1 col</p></td>
+<td><p>2 cols</p></td>
+<td><p><strong>2 cards side-by-side</strong></p></td>
+<td><p>Exercises, examples</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span></code></p></td>
+<td><p>1 col</p></td>
+<td><p>2 cols</p></td>
+<td><p><strong>3 cards side-by-side</strong></p></td>
+<td><p>Multiple small items</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">1</span></code></p></td>
+<td><p>1 col</p></td>
+<td><p>1 col</p></td>
+<td><p><strong>1 card per row</strong></p></td>
+<td><p>Detailed content</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="usage-example">
+<h2>Usage Example<a class="headerlink" href="#usage-example" title="Link to this heading">#</a></h2>
+<p>Here’s a complete example from your oversikt pages:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Oversikt: Omvendte funksjoner</span>
+
+<span class="gu">::::::::{grid} 1 1 2 2</span>
+<span class="gu">---</span>
+<span class="gu">gutter: 2</span>
+<span class="gu">---</span>
+::::::{grid-item-card}
+<span class="gs">**Omvendte funksjoner**</span>
+^^^
+<span class="gs">**Definisjon**</span>:
+$f$ og $g$ er omvendte funksjoner hvis
+
+$$
+f(g(x)) = x \qog g(f(x)) = x
+$$
+::::::
+
+::::::{grid-item-card}
+<span class="gs">**Grafisk sammenheng**</span>
+^^^
+<span class="k">*</span><span class="w"> </span>Grafen til $f$ og $f^{-1}$ er speilet om linja $y = x$
+::::::
+
+::::::{grid-item-card}
+<span class="gs">**Eksistens av omvendte funksjoner**</span>
+^^^
+En funksjon $f$ med definisjonsmengde $D_f$ har en omvendt funksjon hvis...
+::::::
+
+::::::{grid-item-card}
+<span class="gs">**Den deriverte av en omvendt funksjon**</span>
+^^^
+<span class="k">*</span><span class="w"> </span>Hvis et punkt $(a, b)$ ligger på grafen til $f$, så er...
+::::::
+::::::::{grid}
+</pre></div>
+</div>
+<p>This will produce a 2×2 grid in PDF with each card contained on a single page.</p>
+</section>
+<section id="gutter-options">
+<h2>Gutter Options<a class="headerlink" href="#gutter-options" title="Link to this heading">#</a></h2>
+<p>Control spacing between cards with the <code class="docutils literal notranslate"><span class="pre">gutter</span></code> option:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">{grid} 1 1 2 2</span>
+<span class="gu">---</span>
+<span class="gu">gutter: 2</span>
+<span class="gu">---</span>
+</pre></div>
+</div>
+<p>Available gutter values:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gutter:</span> <span class="pre">1</span></code> - Small spacing (0.25rem)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gutter:</span> <span class="pre">2</span></code> - Medium spacing (0.5rem) - <strong>Recommended</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gutter:</span> <span class="pre">3</span></code> - Large spacing (1rem)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gutter:</span> <span class="pre">4</span></code> - Extra large spacing (1.5rem)</p></li>
+</ul>
+</section>
+<section id="card-structure">
+<h2>Card Structure<a class="headerlink" href="#card-structure" title="Link to this heading">#</a></h2>
+<p>Cards support three sections:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>::::::{grid-item-card}
+<span class="gs">**Card Title**</span>
+^^^
+Card body content goes here.
+This is the main content area.
++++
+Card footer (optional)
+::::::
+</pre></div>
+</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p>Everything before <code class="docutils literal notranslate"><span class="pre">^^^</span></code> is the <strong>header</strong></p></li>
+<li><p>Content between <code class="docutils literal notranslate"><span class="pre">^^^</span></code> and <code class="docutils literal notranslate"><span class="pre">+++</span></code> (or end) is the <strong>body</strong></p></li>
+<li><p>Content after <code class="docutils literal notranslate"><span class="pre">+++</span></code> is the <strong>footer</strong> (optional)</p></li>
+</ul>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading">#</a></h2>
+<section id="keep-cards-concise">
+<h3>1. Keep Cards Concise<a class="headerlink" href="#keep-cards-concise" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Each card should be self-contained</p></li>
+<li><p>Aim for content that fits on one page</p></li>
+<li><p>Use bullet points for clarity</p></li>
+</ul>
+</section>
+<section id="balance-content">
+<h3>2. Balance Content<a class="headerlink" href="#balance-content" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Try to keep cards roughly equal in size</p></li>
+<li><p>This prevents awkward page breaks</p></li>
+</ul>
+</section>
+<section id="use-appropriate-grid-sizes">
+<h3>3. Use Appropriate Grid Sizes<a class="headerlink" href="#use-appropriate-grid-sizes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>2 columns (<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">2</span></code>): Best for most overview content</p></li>
+<li><p>3 columns (<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span></code>): Good for short items, may be too narrow for complex math</p></li>
+<li><p>1 column (<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">1</span></code>): Use for detailed explanations</p></li>
+</ul>
+</section>
+<section id="test-pdf-output">
+<h3>4. Test PDF Output<a class="headerlink" href="#test-pdf-output" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Always check PDF output after making changes</p></li>
+<li><p>Look for:</p>
+<ul>
+<li><p>Cards split across pages</p></li>
+<li><p>Overlapping content</p></li>
+<li><p>Proper alignment</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<section id="problem-cards-are-breaking-across-pages">
+<h3>Problem: Cards are breaking across pages<a class="headerlink" href="#problem-cards-are-breaking-across-pages" title="Link to this heading">#</a></h3>
+<p><strong>Solution</strong>: The card content is too long. Options:</p>
+<ol class="arabic simple">
+<li><p>Split content into multiple smaller cards</p></li>
+<li><p>Simplify the content</p></li>
+<li><p>Use a single-column layout for that particular content</p></li>
+</ol>
+</section>
+<section id="problem-layout-looks-wrong-in-pdf">
+<h3>Problem: Layout looks wrong in PDF<a class="headerlink" href="#problem-layout-looks-wrong-in-pdf" title="Link to this heading">#</a></h3>
+<p><strong>Possible causes</strong>:</p>
+<ol class="arabic simple">
+<li><p>Not using the latest CSS files</p></li>
+<li><p>Browser cache issues (clear cache and regenerate)</p></li>
+<li><p>Custom CSS overriding print styles</p></li>
+</ol>
+<p><strong>Solution</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Rebuild the book</span>
+jupyter-book<span class="w"> </span>clean<span class="w"> </span>book/
+jupyter-book<span class="w"> </span>build<span class="w"> </span>book/
+</pre></div>
+</div>
+</section>
+<section id="problem-cards-appear-too-wide-narrow">
+<h3>Problem: Cards appear too wide/narrow<a class="headerlink" href="#problem-cards-appear-too-wide-narrow" title="Link to this heading">#</a></h3>
+<p><strong>Solution</strong>: Adjust the grid specification. Remember the last number controls PDF layout:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{grid}</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">2</span></code> = 2 columns (50% width each)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{grid}</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span></code> = 3 columns (33% width each)</p></li>
+</ul>
+</section>
+</section>
+<section id="implementation-notes">
+<h2>Implementation Notes<a class="headerlink" href="#implementation-notes" title="Link to this heading">#</a></h2>
+<section id="how-it-works">
+<h3>How It Works<a class="headerlink" href="#how-it-works" title="Link to this heading">#</a></h3>
+<p>The CSS uses several print-specific properties:</p>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">page-break-inside:</span> <span class="pre">avoid</span></code></strong> - Prevents breaks within cards</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">break-inside:</span> <span class="pre">avoid</span></code></strong> - Modern alternative to page-break-inside</p></li>
+<li><p><strong>Flexbox layout</strong> - Maintains column structure in print</p></li>
+<li><p><strong>Fixed width percentages</strong> - Ensures proper column sizing</p></li>
+</ol>
+</section>
+<section id="css-specificity">
+<h3>CSS Specificity<a class="headerlink" href="#css-specificity" title="Link to this heading">#</a></h3>
+<p>The print styles use <code class="docutils literal notranslate"><span class="pre">!important</span></code> to override default browser/Sphinx styles. This ensures consistent PDF output across different environments.</p>
+</section>
+<section id="browser-compatibility">
+<h3>Browser Compatibility<a class="headerlink" href="#browser-compatibility" title="Link to this heading">#</a></h3>
+<p>The CSS is compatible with:</p>
+<ul class="simple">
+<li><p>Chrome/Chromium (including PDF export)</p></li>
+<li><p>Firefox</p></li>
+<li><p>Safari</p></li>
+<li><p>Sphinx HTML to PDF converters</p></li>
+</ul>
+</section>
+</section>
+<section id="building-pdfs">
+<h2>Building PDFs<a class="headerlink" href="#building-pdfs" title="Link to this heading">#</a></h2>
+<p>To generate PDFs with proper grid formatting:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Build the HTML first</span>
+jupyter-book<span class="w"> </span>build<span class="w"> </span>book/
+
+<span class="c1"># Use your browser to print to PDF</span>
+<span class="c1"># File &gt; Print &gt; Save as PDF</span>
+
+<span class="c1"># Or use a build script if configured</span>
+./build_pdf.sh
+</pre></div>
+</div>
+</section>
+<section id="related-files">
+<h2>Related Files<a class="headerlink" href="#related-files" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#matematikk_r1/_static/grid_print.css"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">_static/grid_print.css</span></code></span></a> - Main grid print styles</p></li>
+<li><p><a class="reference internal" href="#matematikk_r1/_static/general_style.css"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">_static/general_style.css</span></code></span></a> - General page styles</p></li>
+<li><p><a class="reference internal" href="#matematikk_r1/_config.yml"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></span></a> - Configuration including CSS references</p></li>
+</ul>
+</section>
+<section id="questions-or-issues">
+<h2>Questions or Issues?<a class="headerlink" href="#questions-or-issues" title="Link to this heading">#</a></h2>
+<p>If you encounter issues with grid formatting in PDF output:</p>
+<ol class="arabic simple">
+<li><p>Verify the grid directive syntax</p></li>
+<li><p>Check the gutter spacing</p></li>
+<li><p>Review card content length</p></li>
+<li><p>Test with a simple example first</p></li>
+<li><p>Clear browser cache and rebuild</p></li>
+</ol>
+<p>Remember: The last number in the grid specification (<code class="docutils literal notranslate"><span class="pre">{grid}</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">2</span></code>) determines the PDF layout!</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Innhold
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#css-files">CSS Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-directive-format">Grid Directive Format</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-grid-configurations">Common Grid Configurations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-example">Usage Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gutter-options">Gutter Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#card-structure">Card Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices">Best Practices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keep-cards-concise">1. Keep Cards Concise</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#balance-content">2. Balance Content</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-appropriate-grid-sizes">3. Use Appropriate Grid Sizes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-pdf-output">4. Test PDF Output</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-cards-are-breaking-across-pages">Problem: Cards are breaking across pages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-layout-looks-wrong-in-pdf">Problem: Layout looks wrong in PDF</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-cards-appear-too-wide-narrow">Problem: Cards appear too wide/narrow</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-notes">Implementation Notes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-it-works">How It Works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#css-specificity">CSS Specificity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-compatibility">Browser Compatibility</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-pdfs">Building PDFs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-files">Related Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-or-issues">Questions or Issues?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Av Torstein Flatval, Tiller Videregående Skole
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
