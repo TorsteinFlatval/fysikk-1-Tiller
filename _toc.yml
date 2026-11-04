@@ -37,7 +37,13 @@ parts:
         title: Oppgaver
   - caption: Programmering i fysikk
     chapters:
-    - file: book/Programmering i fysikk/konstant akselerasjon/1E.md
+    - file: book/Programmering i fysikk/Bevegelse med konstant akselerasjon/1E.md
       sections:
-      - file: book/Programmering i fysikk/konstant akselerasjon/oppgaver.md
+      - file: book/Programmering i fysikk/Bevegelse med konstant akselerasjon/oppgaver.md
         title: Oppgaver
+    - file: book/Programmering i fysikk/Når kreftene ikke er konstante/teori.md
+      sections:
+      - file: book/Programmering i fysikk/Når kreftene ikke er konstante/oppgaver.md
+        title: Oppgaver
+
+    
