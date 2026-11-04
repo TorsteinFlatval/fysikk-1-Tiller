@@ -26,6 +26,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-apt-texlive-
 
+      
+
       - name: Install system dependencies (LaTeX + pdf2svg)
         run: |
           sudo apt-get update
@@ -34,7 +36,6 @@ jobs:
             texlive-latex-recommended \
             texlive-latex-extra \
             texlive-fonts-recommended \
-            
             texlive-science \
             texlive-plain-generic \
             cm-super \
