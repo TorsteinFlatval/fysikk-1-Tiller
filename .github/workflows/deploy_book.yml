@@ -34,7 +34,7 @@ jobs:
             texlive-latex-recommended \
             texlive-latex-extra \
             texlive-fonts-recommended \
-            texlive-fonts-extra \
+            
             texlive-science \
             texlive-plain-generic \
             cm-super \
